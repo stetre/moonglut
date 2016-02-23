@@ -1,0 +1,41 @@
+
+=== Geometric Object Rendering Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#GeometricObject[FreeGLUT],
+https://www.opengl.org/resources/libraries/glut/spec3/node80.html#SECTION000120000000000000000[GLUT].
+
+Not supported.
+
+////
+------------------------------------------------
+glutWireSphere NA
+glutSolidSphere NA
+glutWireTorus NA
+glutSolidTorus NA
+glutWireCone NA
+glutSolidCone NA
+glutWireCube NA
+glutSolidCube NA
+glutWireTetrahedron NA
+glutSolidTetrahedron NA
+glutWireOctahedron NA
+glutSolidOctahedron NA
+glutWireDodecahedron NA
+glutSolidDodecahedron NA
+glutWireIcosahedron NA
+glutSolidIcosahedron NA
+glutWireRhombicDodecahedron NA
+glutSolidRhombicDodecahedron NA
+glutWireTeapot NA
+glutSolidTeapot NA
+glutWireTeacup NA
+glutSolidTeacup NA
+glutWireTeaspoon NA
+glutSolidTeaspoon NA
+glutSetVertexAttribCoord3 NA
+glutSetVertexAttribNormal NA
+glutSetVertexAttribTexCoord2 NA
+////
+<<<
+

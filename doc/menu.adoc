@@ -1,0 +1,98 @@
+
+=== Menu Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#Menu[FreeGLUT],
+https://www.opengl.org/resources/libraries/glut/spec3/node35.html#SECTION00070000000000000000[GLUT].
+
+'''
+[[glut.create_menu]]
+* *glut.create_menu* (_func_) +
+-> _menu_id_ +
+ +
+Binding to *glutCreateMenu*. 
+The _func_ callback is executed as *_func(window_id, menu_id, value)_*.
+
+'''
+[[glut.destroy_menu]]
+* *glutdestroy_menu.* (_menu_id_) +
+ +
+Binding to *glutDestroyMenu*.
+
+
+'''
+[[glut.get_menu]]
+* *glut.get_menu* ( ) +
+-> _menu_id_ +
+ +
+Binding to *glutGetMenu*.
+
+
+'''
+[[glut.set_menu]]
+* *glut.set_menu* (_menu_id_) +
+ +
+Binding to *glutSetMenu*.
+
+
+'''
+[[glut.add_menu_entry]]
+* *glut.add_menu_entry* (_label_, _value_) +
+ +
+Binding to *glutAddMenuEntry*.
+
+
+'''
+[[glut.add_sub_menu]]
+* *glut.add_sub_menu* (_label_, _submenu_) +
+ +
+Binding to *glutAddSubMenu*.
+
+
+'''
+[[glut.change_to_menu_entry]]
+* *glut.change_to_menu_entry* (_item_, _label_, _value_) +
+ +
+Binding to *glutChangeToMenuEntry*.
+
+'''
+[[glut.change_to_sub_menu]]
+* *glut.change_to_sub_menu* (_item_, _label_, _value_) +
+ +
+Binding to *glutChangeToSubMenu*.
+
+
+////
+'''
+[[glut.set_menu_font]]   @@
+* *glut.* (_menu_id_, _font_) +
+ +
+Binding to *glutSetMenuFont*.
+////
+
+
+'''
+[[glut.remove_menu_item]]
+* *glut.remove_menu_item* (_item_) +
+ +
+Binding to *glutRemoveMenuItem*.
+
+
+'''
+[[glut.attach_menu]]
+* *glut.attach_menu* (_button_) +
+* *glut.detach_menu* (_button_) +
+ +
+Bindings to *glutAttachMenu* and to *glutDetachMenu*, respectively.
+The _button_ argument (a string) must be one amongst '_left_', '_middle_', and '_right_'. 
+
+'''
+[[glut.menu_destroy_func]]
+* *glut.menu_destroy_func* (_func_) +
+ +
+Binding to *glutMenuDestroyFunc*.
+The _func_ callback is executed as *_func(window_id, menu_id)_*.
+
+
+<<<
+

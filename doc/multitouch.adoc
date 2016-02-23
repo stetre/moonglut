@@ -1,0 +1,19 @@
+
+=== MultiTouch Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#MultiTouch[FreeGLUT].
+
+Not supported.
+
+////
+------------------------------------------------
+glutMultiEntryFunc	NA
+glutMultiButtonFunc NA
+glutMultiMotionFunc NA
+glutMultiPassiveFunc NA
+
+////
+
+<<<
+

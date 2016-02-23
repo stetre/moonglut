@@ -1,0 +1,134 @@
+
+=== State Setting and Retrieval Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#StateSetting[FreeGLUT],
+https://www.opengl.org/resources/libraries/glut/spec3/node69.html#SECTION000100000000000000000[GLUT].
+
+'''
+[[glut.init_state]]
+* *glut.init_state* ( ) +
+-> _boolean_ +
+ +
+Binding to *glutGet(GLUT_INIT_STATE)*. 
+
+'''
+[[glut.version]]
+* *glut.version* ( ) +
+-> _major_, _minor_, _micro_ +
+ +
+Binding to *glutGet(GLUT_VERSION)*. 
+
+'''
+[[glut.action_on_window_close]]
+* *glut.action_on_window_close* ([_action_]) +
+-> _action_ +
+ +
+Binding to *glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE)*. 
+The _action_ argument (a string) must be one amongst '_exit_', '_return_', and '_continue_'.
+
+'''
+[[glut.use_current_context]]
+* *glut.use_current_context* ([_boolean_]) +
+-> _boolean_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_RENDERING_CONTEXT*.
+ 
+'''
+[[glut.multisample]]
+* *glut.multisample* ([_nsamples_]) +
+-> _nsamples_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_MULTISAMPLE*.
+
+'''
+[[glut.aux_buffers]]
+* *glut.aux_buffers* ([_nbuffers_]) +
+-> _nbuffers_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_AUX*.
+
+'''
+[[glut.screen]]
+* *glut.screen* ( ) +
+-> _width_, _height_, _width_mm_, _height_mm_ +
+ +
+Binding to *glutGet(what)* where _what_ = *GLUT_SCREEN_WIDTH*, 
+*GLUT_SCREEN_HEIGHT*, *GLUT_SCREEN_WIDTH_MM* and *GLUT_SCREEN_HEIGHT_MM*.
+
+'''
+[[glut.skip_stale_motion_events]]
+* *glut.skip_stale_motion_events* ([_boolean_]) +
+-> _boolean_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_SKIP_STALE_MOTION_EVENTS*.
+
+'''
+[[glut.stroke_font_draw_join_dots]]
+* *glut.stroke_font_draw_join_dots* ([_boolean_]) +
+-> _boolean_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_STROKE_FONT_DRAW_JOIN_DOTS*.
+
+'''
+[[glut.geometry_visualize_normals]]
+* *glut.geometry_visualize_normals* ([_boolean_]) +
+-> _boolean_ +
+ +
+Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_GEOMETRY_VISUALIZE_NORMALS*.
+
+'''
+Other bindings to *glutGet(what)* and to *glutSetOption(what)*: 
+
+- _what_ = *GLUT_INIT_WINDOW_X*: see <<glut.init_window_position, glut.init_window_position>>
+- _what_ = *GLUT_INIT_WINDOW_Y*: see <<glut.init_window_position, glut.init_window_position>>
+- _what_ = *GLUT_INIT_WINDOW_WIDTH*: see <<glut.init_window_size, glut.init_window_size>>
+- _what_ = *GLUT_INIT_WINDOW_HEIGHT*: see <<glut.init_window_size, glut.init_window_size>>
+- _what_ = *GLUT_INIT_DISPLAY_MODE*: see <<glut.init_display_mode, glut.init_display_mode>>
+- _what_ = *GLUT_WINDOW_CURSOR*: see <<glut.cursor, glut.cursor>>
+- _what_ = *GLUT_FULL_SCREEN*: see <<glut.full_screen, glut.full_screen>>
+
+////
+- _what_ = **: see <<glut., glut.>>
+glutGetOption
+GLUT_INIT_MAJOR_VERSION:			init_context_version()
+GLUT_INIT_MINOR_VERSION:			init_context_version()
+GLUT_INIT_FLAGS:					init_context_flags()
+GLUT_INIT_PROFILE:					init_context_profile()
+
+glutDeviceGet 
+table = device_properties() @@
+
+glutGetModifiers
+shift, ctl, alt = get_modifiers() @@
+
+glutExtensionSupported
+extension_supported(extension) @@
+
+glutGet(GLUT_ELAPSED_TIME):			elapsed_time() @@
+GLUT_WINDOW_PARENT:					window_parent() @@
+GLUT_WINDOW_NUM_CHILDREN:			window_num_children() @@
+GLUT_MENU_NUM_ITEMS:				menu_num_items() @@
+
+
+glutGet/glutSetOption
+GLUT_DIRECT_RENDERING: NA? @@				
+
+glutLayerGet NA
+glutGetProcAddress NA
+
+8yy
+'''
+[[glut.]]
+* *glut.* ([_arg_]) +
+-> _arg_ +
+ +
+Binding to *glutGet()*. 
+Same as *glutGet()*. 
+Binding to **.
+With no arguments, only returns the current values.
+
+
+////
+<<<
+

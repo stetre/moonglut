@@ -1,0 +1,85 @@
+
+== Preface
+
+This is the reference manual of *MoonGLUT*, which is a 
+http://www.lua.org[*Lua*] binding library for 
+http://freeglut.sourceforge.net[*FreeGLUT*]. 
+footnote:[
+This manual is written in
+http://www.methods.co.nz/asciidoc/[AsciiDoc], rendered with
+http://asciidoctor.org/[AsciiDoctor] and a CSS from the
+https://github.com/asciidoctor/asciidoctor-stylesheet-factory[AsciiDoctor Stylesheet Factory].
+The PDF version is produced with
+https://github.com/asciidoctor/asciidoctor-pdf[AsciiDoctor-Pdf].]
+
+It is assumed that the reader is familiar with both FreeGLUT and the Lua programming language.
+
+For convenience of reference, this document contains external (deep) links to the 
+http://www.lua.org/manual/5.3/manual.html[Lua Reference Manual], the 
+http://freeglut.sourceforge.net/docs/api.php[FreeGLUT API documentation] and the
+https://www.opengl.org/resources/libraries/glut/spec3/spec3.html[GLUT API documentation].
+
+=== Getting and installing
+
+The *official repository* of MoonGLUT is on GitHub at the following link:
+*https://github.com/stetre/moonglut* .
+
+MoonGLUT runs on GNU/Linux and requires 
+*http://www.lua.org[Lua]* version 5.3 or greater, and
+*http://freeglut.sourceforge.net/index.php#download[FreeGLUT]* version 3.0.0 or greater.
+
+To install MoonGLUT, download the 
+https://github.com/stetre/moonglut/releases[latest release] and do the following:
+
+[source,shell]
+----
+# ... download moonglut-0.1.tar.gz ...
+[ ]$ tar -zxpvf moonglut-0.1.tar.gz
+[ ]$ cd moonglut-0.1
+[moonglut-0.1]$ make
+[moonglut-0.1]$ make check
+[moonglut-0.1]$ sudo make install
+----
+
+The _$make check_ command shows you what will be installed and where (please read
+its output before executing _$make install_).
+By default, MoonGLUT installs its components in subdirectories of `/usr/local/`
+(and creates such directories, if needed).
+This behaviour can be changed by defining PREFIX with the desired alternative 
+base installation directory. For example, this will install the components
+in `/home/joe/local`:
+
+[source,shell]
+----
+[moonglut-0.1]$ make
+[moonglut-0.1]$ make install PREFIX=/home/joe/local
+----
+
+=== Module organization
+
+The MoonGLUT module is loaded using Lua's 
+http://www.lua.org/manual/5.3/manual.html#pdf-require[require]() and
+returns a table containing the functions it provides 
+(as usual with Lua modules). This manual assumes that such
+table is named *glut*, i.e. that it is loaded with:
+
+[source,lua,indent=1]
+----
+glut = require("moonglut")
+----
+
+but nothing forbids the use of a different name.
+
+=== Examples
+
+A few examples can be found in the *examples/* directory of the release package.
+
+=== License
+
+MoonGLUT is released under the *MIT/X11 license* (same as
+http://www.lua.org/license.html[Lua], and with the same only requirement to give proper
+credits to the original author). 
+The copyright notice is in the LICENSE file in the base directory
+of the https://github.com/stetre/moonglut[official repository] on GitHub.
+
+<<<

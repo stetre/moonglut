@@ -1,0 +1,108 @@
+
+=== Initialization Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#Initialization[FreeGLUT], 
+https://www.opengl.org/resources/libraries/glut/spec3/node9.html#SECTION00030000000000000000[GLUT].
+
+'''
+[[glut.init]]
+* *glut.init* ([_arg_]) +
+-> _arg_ +
+ +
+Binding to *glutInit*. The optional _arg_ argument must be a sequence of strings
+(typically the table of arguments passed to the Lua script at the command line).
+Returns a copy of the same table stripped from any option recognized by FreeGLUT. +
+
+'''
+[[glut.init_context]]
+* *glut.init_context* (_major_, _minor_, _profile_ [, _debug_]) +
+-> _major_, _minor_, _profile_, _debug_ +
+ +
+Binding to *glutInitContextFlags*, *glutInitContextProfile*, and *glutInitContextVersion*.
+The _major_ and _minor_ parameters are the context version numbers. The _profile_ parameter
+(a string) may be one amongst: '_core_', '_compatible_' and '_forward compatible_' 
+(corresponding to, respectively: 'all features of the current release', 'all features ever', 
+'only non deprecated features'). 
+If the _debug_ parameter (a boolean) is _true_, then the debug flag is set.
+With no arguments, this function only returns the current values.
+
+'''
+[[glut.init_window_position]]
+* *glut.init_window_position* ([_x_, _y_]) +
+-> _x_, _y_ +
+ +
+Binding to *glutInitWindowPosition*. 
+With no arguments, only returns the current values.
+
+'''
+[[glut.init_window_size]]
+* *glut.init_window_size* ([_width_, _height_]) +
+-> _width_, _height_ +
+ +
+Binding to *glutInitWindowSize*. 
+With no arguments, only returns the current values.
+
+'''
+[[glut.init_display_mode]]
+* *glut.init_display_mode* ([_opt_, _..._]) +
+-> _opt_, _..._ +
+ +
+Binding to *glutInitDisplayMode*. Accepts a list of options (strings). 
+Valid options are: 
+'_rgb_', '_rgba_', '_index_', '_single_', '_double_', '_accum_', '_alpha_', '_depth_', '_stencil_', '_multisample_', '_stereo_' and '_luminance_'.
+With no arguments, only returns the current options.
+
+////
+glutInitDisplayString NA
+////
+
+'''
+[[glut.init_error_func]]
+* *glut.init_error_func* ([_func_]) +
+ +
+Binding to *glutInitErrorFunc*. The _func_ callback is executed as *_func(message)_* 
+where _message_ is a string.
+
+'''
+[[glut.init_warning_func]]
+* *glut.init_warning_func* ([_func_]) +
+ +
+Binding to *glutInitWarningFunc*. The _func_ callback is executed as *_func(message)_* 
+where _message_ is a string.
+
+////
+8yy
+'''
+[[glut.]]
+* *glut.* ([_arg_]) +
+-> _arg_ +
+ +
+Binding to **.
+The _func_ callback is executed as *_func()_* where __ is .
+
+glutInitContextFlags() @@
+flag, ... = init_context_flags([flag, ...]) 
+
+glutInitContextProfile() @@
+flag, ... = init_context_profile([flag, ...]) 
+
+glutInitContextVersion() @@
+major, minor = init_context_version([major, minor]) */
+
+8yy
+'''
+[[glut.]]
+* *glut.* ([_arg_]) +
+-> _arg_ +
+ +
+Binding to **.
+With no arguments, only returns the current values.
+The _func_ callback is executed as *_func()_* where __ is .
+
+////
+
+
+
+<<<
+

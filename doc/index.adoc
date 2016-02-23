@@ -1,0 +1,54 @@
+= MoonGLUT Reference Manual
+Stefano Trettel
+v0.1, 2016-02-23
+:toc: left
+:stylesdir: ./
+:stylesheet: colony.css
+:source-highlighter: pygments
+:pygments-style: autumn
+:source-language: lua
+:examplesdir: ../examples
+
+image::powered-by-lua.png[Lua logo, link=http://www.lua.org]
+
+include::preface.adoc[]
+
+== Bindings
+
+include::init.adoc[]
+
+include::event.adoc[]
+
+include::window.adoc[]
+
+include::display.adoc[]
+
+include::mouse.adoc[]
+
+include::overlay.adoc[]
+
+include::menu.adoc[]
+
+include::global_callbacks.adoc[]
+
+include::window_callbacks.adoc[]
+
+include::state.adoc[]
+
+include::font.adoc[]
+
+include::geometry.adoc[]
+
+include::game.adoc[]
+
+include::video.adoc[]
+
+include::color.adoc[]
+
+include::multitouch.adoc[]
+
+include::mobile.adoc[]
+
+include::misc.adoc[]
+
+

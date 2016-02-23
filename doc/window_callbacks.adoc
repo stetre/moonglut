@@ -1,0 +1,138 @@
+
+=== Window-Specific Callback Registration Functions
+
+References: 
+http://freeglut.sourceforge.net/docs/api.php#WindowCallback[FreeGLUT],
+https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000[GLUT].
+
+Registration functions can be invoked with no arguments in order to unregister
+the current callback (if any). 
+
+All the window-specific callbacks receive the identifier of the current window
+as first parameter (_window_id_). 
+
+For callbacks that receive _x_ and _y_ parameters, these give the current position
+of the mouse cursor.
+
+'''
+[[glut.display_func]]
+* *glut.display_func* ([_func_]) +
+ +
+Binding to *glutDisplayFunc*.
+The _func_ callback is executed as *_func(window_id)_*.
+
+'''
+[[glut.reshape_func]]
+* *glut.reshape_func* ([_func_]) +
+ +
+Binding to *glutReshapeFunc*.
+The _func_ callback is executed as *_func(window_id, width, height)_*.
+
+
+'''
+[[glut.close_func]]
+* *glut.close_func* ([_func_]) +
+ +
+Binding to *glutCloseFunc*.
+The _func_ callback is executed as *_func(window_id)_*.
+
+
+'''
+[[glut.keyboard_func]]
+* *glut.keyboard_func* ([_func_]) +
+* *glut.keyboard_up_func* ([_func_]) +
+ +
+Bindings to *glutKeyboardFunc* and to *glutKeyboardUpFunc*.
+The _func_ callback is executed as *_func(window_id, key, x, y, code)_*.
+The _key_ parameter (a string) is the pressed character if its ASCII code is between
+33 and 126 (letters, numbers etc), otherwise it is one amongst the following:
+'_nul_' (0), '_soh_' (1), '_stx_' (2), '_etx_' (3), '_eot_' (4), '_enq_' (5), '_ack_' (6), 
+'_bel_' (7), '_bs_' (8), '_ht_' (9), '_nl_' (10), '_vt_' (11), '_ff_' (12), '_cr_' (13), 
+'_so_' (14), '_si_' (15), '_dle_' (16), '_dc1_' (17), '_dc2_' (18), '_dc3_' (19), '_dc4_' (20), 
+'_nak_' (21), '_syn_' (22), '_etb_' (23), '_can_' (24), '_em_' (25), '_sub_' (26), '_esc_' (27), 
+'_fs_' (28), '_gs_' (29), '_rs_' (30), '_us_' (31), '_space_' (32), and '_del_' (127).
+For codes greater than 127, _string_ = '_\<code>_'.
+The _code_ parameter is the corresponding ASCII code.
+
+'''
+[[glut.special_func]]
+* *glut.special_func* ([_func_]) +
+* *glut.special_up_func* ([_func_]) +
+ +
+Binding to *glutSpecialFunc* and to *glutSpecialUpFunc*.
+The _func_ callback is executed as *_func(window_id, key, x, y, code)_*.
+The _key_ parameter (a string) is one amongst: 
+'_f1_' ... '_f12_', '_left_', '_right_', '_up_', '_down_', '_page-up_', '_page-down_',
+'_home_', '_end_', '_ins_', '_num-lock', '_begin_', '_del_', '_shift-l_', '_shift-r_',
+'_ctrl-l_', '_ctrl-r_', '_alt-l_' and '_alt-r_'.
+The _code_ parameter is the corresponding GLUT_KEY_XXX code.
+
+'''
+[[glut.motion_func]]
+* *glut.motion_func* ([_func_]) +
+ +
+Binding to *glutMotionFunc*.
+The _func_ callback is executed as *_func(window_id, x, y)_*.
+
+
+'''
+[[glut.passive_motion_func]]
+* *glut.passive_motion_func* ([_func_]) +
+ +
+Binding to *glutPassiveMotionFunc*.
+The _func_ callback is executed as *_func(window_id, x, y)_*.
+
+'''
+[[glut.mouse_func]]
+* *glut.mouse_func* ([_func_]) +
+ +
+Binding to *glutMouseFunc*.
+The _func_ callback is executed as *_func(window_id, button, state, x, y)_*.
+The _button_ parameter (a string) is one amongst '_left_', '_middle_' and '_right_'.
+The _state_ parameter (also a string) may be '_up_' or '_down_'.
+
+
+////
+'''
+[[glut.mouse_wheel_func]]
+* *glut.mouse_wheel_func* ([_func_]) +
+ +
+Binding to *glutMouseWheelFunc*.
+The _func_ callback is executed as *_func(window_id, wheel, direction, state, x, y)_*. @@ wheel, direction, state
+////
+
+
+'''
+[[glut.entry_func]]
+* *glut.entry_func* ([_func_]) +
+ +
+Binding to *glutEntryFunc*.
+The _func_ callback is executed as *_func(window_id, _state_)_*.
+The _state_ parameter (a string) may be '_in_' (entered) or '_out_' (left).
+
+
+'''
+[[glut.window_status_func]]
+* *glut.window_status_func* ([_func_]) +
+ +
+Binding to *glutWindowStatusFunc*.
+The _func_ callback is executed as *_func(window_id, _state_)_*.
+The _state_ parameter (a string) is one amongst: '_hidden_', '_fully retained_', 
+'_partially retained_' or '_fully covered_'.
+
+////
+glutOverlayDisplayFunc NA
+glutPositionFunc NA
+glutJoystickFunc NA
+glutSpaceballMotionFunc NA
+glutSpaceballRotateFunc NA
+glutSpaceballButtonFunc NA
+glutButtonBoxFunc NA
+glutDialsFunc NA
+glutTabletMotionFunc NA
+glutTabletButtonFunc NA
+glutVisibilityFunc DEPRECATED
+
+////
+<<<
+
