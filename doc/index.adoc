@@ -1,6 +1,6 @@
 = MoonGLUT Reference Manual
 Stefano Trettel
-v0.1, 2016-02-23
+v0.2, 2016-05-15
 :toc: left
 :stylesdir: ./
 :stylesheet: colony.css

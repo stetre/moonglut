@@ -35,7 +35,7 @@
 #include "lauxlib.h"
 #include <GL/freeglut.h>
 
-#define MOONGLUT_VERSION        "0.1"
+#define MOONGLUT_VERSION        "0.2"
 
 #endif /* moonglutDEFINED */
 
