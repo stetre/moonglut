@@ -53,6 +53,10 @@ COPT    += -std=gnu99
 COPT    += -DLUAVER=$(LUAVER)
 ifeq ($(D),1)
 COPT	+= -DDEBUG
+COPT 	+= -Wshadow -Wsign-compare -Wundef -Wwrite-strings
+COPT	+= -Wdisabled-optimization -Wdeclaration-after-statement
+COPT    += -Wmissing-prototypes -Wstrict-prototypes -Wnested-externs
+COPT    += -Wc++-compat -Wold-style-definition
 endif
 COPT	+= $(INCDIR)
 
@@ -84,6 +88,12 @@ install:
 	@-ln -fsv $(C_DIR)/$(Tgt).so $(S_DIR)/lib$(Tgt).so
 	@-cp -fpvr ../$(Tgt) $(L_DIR)
 
+uninstall:
+	@-rm -f $(H_DIR)/$(Tgt).h
+	@-rm -f $(C_DIR)/$(Tgt).so
+	@-rm -f $(S_DIR)/lib$(Tgt).so
+	@-rm -fr $(L_DIR)/$(Tgt)
+
 build:	clean $(Tgt) 
 
 symbols: build
@@ -91,7 +101,6 @@ symbols: build
 
 $(Tgt):		$(Objs)
 	@-$(CC) -shared -Wl,-soname,$(Tgt).so,$(LIBS) -o $(Tgt).so $(Objs) $(LIBS)
-#	@-$(CC) -shared -Wl,-soname,$(Tgt).so -o $(Tgt).so $(LIBS) $(Objs)
 	@-rm -f $(Objs)
 	@echo
 

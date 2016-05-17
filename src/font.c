@@ -50,13 +50,10 @@ static void* BitmapCodes[] = {
     GLUT_BITMAP_HELVETICA_18,
 };
 
-static void* CheckBitmap(lua_State *L, int arg)
+static void* checkbitmap(lua_State *L, int arg)
     {
     return BitmapCodes[luaL_checkoption(L, arg, NULL, BitmapStrings)];
     }
-
-void* moonglut_CheckBitmap(lua_State *L, int arg)
-    { return CheckBitmap(L, arg); }
 
 static const char *StrokeStrings[] = {
     "stroke roman", 
@@ -91,7 +88,7 @@ static int CheckCharacter(lua_State *L,  int arg)
 static int BitmapCharacter(lua_State *L) 
     {
     int character;
-    void *font = CheckBitmap(L, 1);
+    void *font = checkbitmap(L, 1);
     character = CheckCharacter(L, 2);
     glutBitmapCharacter(font, character);
     return 0;
@@ -100,7 +97,7 @@ static int BitmapCharacter(lua_State *L)
 static int BitmapWidth(lua_State *L) 
     {
     int character;
-    void *font = CheckBitmap(L, 1);
+    void *font = checkbitmap(L, 1);
     character = CheckCharacter(L, 2);
     lua_pushinteger(L, glutBitmapWidth(font, character));
     return 1;
@@ -124,7 +121,7 @@ static int StrokeWidth(lua_State *L)
 
 static int BitmapLength(lua_State *L)
     {
-    void *font = CheckBitmap(L, 1);
+    void *font = checkbitmap(L, 1);
     const unsigned char *string = (unsigned char*)luaL_checkstring(L, 2);
     lua_pushinteger(L, glutBitmapLength(font, string));
     return 1;
@@ -140,7 +137,7 @@ static int StrokeLength(lua_State *L)
 
 static int BitmapHeight(lua_State *L)
     {
-    void *font = CheckBitmap(L, 1);
+    void *font = checkbitmap(L, 1);
     lua_pushinteger(L, glutBitmapHeight(font));
     return 1;
     }
@@ -154,7 +151,7 @@ static int StrokeHeight(lua_State *L)
 
 static int BitmapString(lua_State *L)
     {
-    void *font = CheckBitmap(L, 1);
+    void *font = checkbitmap(L, 1);
     const unsigned char *string = (unsigned char*)luaL_checkstring(L, 2);
     glutBitmapString(font, string);
     return 0;

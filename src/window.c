@@ -80,7 +80,6 @@ static int InitWindowSize(lua_State *L)
     return 2;
     }
 
-void moonglut_callbacksClose(void);
 #define L moonglut_L
 void windowCloseCallback(void)
 /* This callback is always registered for windows and subwindows.
@@ -97,6 +96,7 @@ void windowCloseCallback(void)
 #undef L
 
 
+#if 0
 int windowEnterGameMode(lua_State *L)
     {
     int id;
@@ -112,6 +112,7 @@ int windowEnterGameMode(lua_State *L)
     lua_pushinteger(L, id);
     return 1;
     }
+#endif
 
 static int CreateWindow(lua_State *L)
     {

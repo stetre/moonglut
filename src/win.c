@@ -33,30 +33,30 @@
 static int cmp(win_t *win1, win_t *win2) /* the compare function */
     { return (win1->id < win2->id ? -1 : win1->id > win2->id); } 
 
-static RB_HEAD(wintree_s, win_s) head = RB_INITIALIZER(&head);
+static RB_HEAD(wintree_s, win_s) Head = RB_INITIALIZER(&Head);
 
 RB_PROTOTYPE_STATIC(wintree_s, win_s, entry, cmp) 
 RB_GENERATE_STATIC(wintree_s, win_s, entry, cmp) 
  
 static win_t *win_remove(win_t *win) 
-    { return RB_REMOVE(wintree_s, &head, win); }
+    { return RB_REMOVE(wintree_s, &Head, win); }
 static win_t *win_insert(win_t *win) 
-    { return RB_INSERT(wintree_s, &head, win); }
+    { return RB_INSERT(wintree_s, &Head, win); }
 win_t *win_search(int id) 
-    { win_t tmp; tmp.id = id; return RB_FIND(wintree_s, &head, &tmp); }
+    { win_t tmp; tmp.id = id; return RB_FIND(wintree_s, &Head, &tmp); }
 win_t *win_first(int id) 
-    { win_t tmp; tmp.id = id; return RB_NFIND(wintree_s, &head, &tmp); }
+    { win_t tmp; tmp.id = id; return RB_NFIND(wintree_s, &Head, &tmp); }
 win_t *win_next(win_t *win)
-    { return RB_NEXT(wintree_s, &head, win); }
+    { return RB_NEXT(wintree_s, &Head, win); }
 #if 0
 win_t *win_prev(win_t *win)
-    { return RB_PREV(wintree_s, &head, win); }
+    { return RB_PREV(wintree_s, &Head, win); }
 win_t *win_min(void)
-    { return RB_MIN(wintree_s, &head); }
+    { return RB_MIN(wintree_s, &Head); }
 win_t *win_max(void)
-    { return RB_MAX(wintree_s, &head); }
+    { return RB_MAX(wintree_s, &Head); }
 win_t *win_root(void)
-    { return RB_ROOT(&head); }
+    { return RB_ROOT(&Head); }
 #endif
 win_t *win_new(int id, int parent)
     {

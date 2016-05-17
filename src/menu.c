@@ -31,7 +31,6 @@
 
 #define L moonglut_L
 
-void moonglut_callbacksMenuDestroy(void);
 
 static void MenuDestroyCallback(void)
     {
@@ -43,7 +42,6 @@ static void MenuDestroyCallback(void)
 
 #undef L
 
-void moonglut_callbacksMenuCallback(int value);
 
 static int CreateMenu(lua_State *L)
     {
@@ -147,11 +145,10 @@ static int DetachMenu(lua_State *L)
     }
 
 #if 0
-void* moonglut_CheckBitmap(lua_State *L, int arg);
 static int SetMenuFont(lua_State *L) /*@@*/
     {
     int id = luaL_checkinteger(L, 1);
-    void *font = moonglut_CheckBitmap(L, 2);
+    void *font = checkbitmap(L, 2);
     glutSetMenuFont(id, font);
     return 0;
     }

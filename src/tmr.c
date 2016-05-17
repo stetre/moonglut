@@ -51,30 +51,30 @@ static int id_new(void)
 static int cmp(tmr_t *tmr1, tmr_t *tmr2) /* the compare function */
     { return (tmr1->id < tmr2->id ? -1 : tmr1->id > tmr2->id); } 
 
-static RB_HEAD(tmrtree_s, tmr_s) head = RB_INITIALIZER(&head);
+static RB_HEAD(tmrtree_s, tmr_s) Head = RB_INITIALIZER(&Head);
 
 RB_PROTOTYPE_STATIC(tmrtree_s, tmr_s, entry, cmp) 
 RB_GENERATE_STATIC(tmrtree_s, tmr_s, entry, cmp) 
  
 static tmr_t *tmr_remove(tmr_t *tmr) 
-    { return RB_REMOVE(tmrtree_s, &head, tmr); }
+    { return RB_REMOVE(tmrtree_s, &Head, tmr); }
 static tmr_t *tmr_insert(tmr_t *tmr) 
-    { return RB_INSERT(tmrtree_s, &head, tmr); }
+    { return RB_INSERT(tmrtree_s, &Head, tmr); }
 tmr_t *tmr_search(int id) 
-    { tmr_t tmp; tmp.id = id; return RB_FIND(tmrtree_s, &head, &tmp); }
-static tmr_t *tmr_first(int id) 
-    { tmr_t tmp; tmp.id = id; return RB_NFIND(tmrtree_s, &head, &tmp); }
+    { tmr_t tmp; tmp.id = id; return RB_FIND(tmrtree_s, &Head, &tmp); }
 #if 0
+static tmr_t *tmr_first(int id) 
+    { tmr_t tmp; tmp.id = id; return RB_NFIND(tmrtree_s, &Head, &tmp); }
 tmr_t *tmr_next(tmr_t *tmr)
-    { return RB_NEXT(tmrtree_s, &head, tmr); }
+    { return RB_NEXT(tmrtree_s, &Head, tmr); }
 tmr_t *tmr_prev(tmr_t *tmr)
-    { return RB_PREV(tmrtree_s, &head, tmr); }
+    { return RB_PREV(tmrtree_s, &Head, tmr); }
 tmr_t *tmr_min(void)
-    { return RB_MIN(tmrtree_s, &head); }
+    { return RB_MIN(tmrtree_s, &Head); }
 tmr_t *tmr_max(void)
-    { return RB_MAX(tmrtree_s, &head); }
+    { return RB_MAX(tmrtree_s, &Head); }
 tmr_t *tmr_root(void)
-    { return RB_ROOT(&head); }
+    { return RB_ROOT(&Head); }
 #endif
 
 
@@ -102,10 +102,12 @@ void tmr_free(tmr_t* tmr)
     free(tmr);  
     }
 
+#if 0
 void tmr_free_all(void)
     {
     tmr_t *tmr;
     while((tmr = tmr_first(0)))
         tmr_free(tmr);
     }
+#endif
 

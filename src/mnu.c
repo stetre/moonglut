@@ -33,30 +33,30 @@
 static int cmp(mnu_t *mnu1, mnu_t *mnu2) /* the compare function */
     { return (mnu1->id < mnu2->id ? -1 : mnu1->id > mnu2->id); } 
 
-static RB_HEAD(mnutree_s, mnu_s) head = RB_INITIALIZER(&head);
+static RB_HEAD(mnutree_s, mnu_s) Head = RB_INITIALIZER(&Head);
 
 RB_PROTOTYPE_STATIC(mnutree_s, mnu_s, entry, cmp) 
 RB_GENERATE_STATIC(mnutree_s, mnu_s, entry, cmp) 
  
 static mnu_t *mnu_remove(mnu_t *mnu) 
-    { return RB_REMOVE(mnutree_s, &head, mnu); }
+    { return RB_REMOVE(mnutree_s, &Head, mnu); }
 static mnu_t *mnu_insert(mnu_t *mnu) 
-    { return RB_INSERT(mnutree_s, &head, mnu); }
+    { return RB_INSERT(mnutree_s, &Head, mnu); }
 mnu_t *mnu_search(int id) 
-    { mnu_t tmp; tmp.id = id; return RB_FIND(mnutree_s, &head, &tmp); }
-mnu_t *mnu_first(int id) 
-    { mnu_t tmp; tmp.id = id; return RB_NFIND(mnutree_s, &head, &tmp); }
-mnu_t *mnu_next(mnu_t *mnu)
-    { return RB_NEXT(mnutree_s, &head, mnu); }
+    { mnu_t tmp; tmp.id = id; return RB_FIND(mnutree_s, &Head, &tmp); }
 #if 0
+mnu_t *mnu_first(int id) 
+    { mnu_t tmp; tmp.id = id; return RB_NFIND(mnutree_s, &Head, &tmp); }
+mnu_t *mnu_next(mnu_t *mnu)
+    { return RB_NEXT(mnutree_s, &Head, mnu); }
 mnu_t *mnu_prev(mnu_t *mnu)
-    { return RB_PREV(mnutree_s, &head, mnu); }
+    { return RB_PREV(mnutree_s, &Head, mnu); }
 mnu_t *mnu_min(void)
-    { return RB_MIN(mnutree_s, &head); }
+    { return RB_MIN(mnutree_s, &Head); }
 mnu_t *mnu_max(void)
-    { return RB_MAX(mnutree_s, &head); }
+    { return RB_MAX(mnutree_s, &Head); }
 mnu_t *mnu_root(void)
-    { return RB_ROOT(&head); }
+    { return RB_ROOT(&Head); }
 #endif
 mnu_t *mnu_new(int id)
     {
@@ -84,6 +84,7 @@ void mnu_free(mnu_t* mnu)
     free(mnu);  
     }
 
+#if 0
 void mnu_free_all(void)
     {
     mnu_t *mnu;
@@ -99,6 +100,7 @@ mnu_t* mnu_check(lua_State *L, int arg)
         luaL_error(L, "invalid menu id");
     return mnu;
     }
+#endif
 
 mnu_t *mnu_current(lua_State *L)
     {

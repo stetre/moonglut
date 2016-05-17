@@ -40,22 +40,6 @@ static void AddVersions(lua_State *L)
 
     }
 
-void moonglut_open_init(lua_State *L);
-void moonglut_open_joystick(lua_State *L);
-void moonglut_open_window(lua_State *L);
-void moonglut_open_display(lua_State *L);
-void moonglut_open_cursor(lua_State *L);
-void moonglut_open_overlay(lua_State *L);
-void moonglut_open_menu(lua_State *L);
-void moonglut_open_callbacks(lua_State *L);
-void moonglut_open_font(lua_State *L);
-void moonglut_open_geometry(lua_State *L);
-void moonglut_open_teapot(lua_State *L);
-void moonglut_open_gamemode(lua_State *L);
-void moonglut_open_videoresize(lua_State *L);
-void moonglut_open_misc(lua_State *L);
-void moonglut_open_ext(lua_State *L);
-
 lua_State *moonglut_L = NULL;
 
 int luaopen_moonglut(lua_State *L)

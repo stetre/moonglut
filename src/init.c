@@ -47,10 +47,11 @@ static int Init(lua_State *L)
         argc = luaL_len(L, table_index) + 1;
         }
 
-    argv = malloc(sizeof(char*) * argc);
+    argv = (char**)malloc(sizeof(char*) * argc);
     if(argv == NULL)
         return luaL_error(L, "cannot allocate memory"); 
-    argv[0] = "moonglut";
+    //argv[0] = "moonglut";
+    argv[0] = strdup("moonglut");
     if(argc > 1)
         {
         for(i = 1; i < argc; i++)
