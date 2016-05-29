@@ -32,6 +32,8 @@ glut.special_up_func(function(id, key, x, y, code)
    print("special up:", key, x, y, code)
 end)
 
+glut.display_func(function() end)
+
 print("press any key, or ESC to unregister the callbacks")
 
 glut.main_loop()

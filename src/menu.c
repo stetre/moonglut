@@ -43,7 +43,7 @@ static void MenuDestroyCallback(void)
 #undef L
 
 
-static int CreateMenu(lua_State *L)
+static int CreateMenuXXX(lua_State *L)
     {
     mnu_t *mnu;
     int id;
@@ -60,7 +60,7 @@ static int CreateMenu(lua_State *L)
     return 1;
     }
 
-static int DestroyMenu(lua_State *L)
+static int DestroyMenuXXX(lua_State *L)
     {
     mnu_t *mnu;
     int id = luaL_checkinteger(L, 1);
@@ -71,13 +71,13 @@ static int DestroyMenu(lua_State *L)
     return 0;
     }
 
-static int GetMenu(lua_State *L)
+static int GetMenuXXX(lua_State *L)
     {
     lua_pushinteger(L, glutGetMenu());
     return 1;
     }
 
-static int SetMenu(lua_State *L)
+static int SetMenuXXX(lua_State *L)
     {
     int id = luaL_checkinteger(L, 1);
     glutSetMenu(id);
@@ -164,10 +164,10 @@ static int MenuNumItems(lua_State *L)
 
 static const struct luaL_Reg Functions[] = 
     {
-        { "create_menu", CreateMenu },
-        { "destroy_menu", DestroyMenu },
-        { "get_menu", GetMenu },
-        { "set_menu", SetMenu },
+        { "create_menu", CreateMenuXXX },
+        { "destroy_menu", DestroyMenuXXX },
+        { "get_menu", GetMenuXXX },
+        { "set_menu", SetMenuXXX },
         { "add_menu_entry", AddMenuEntry },
         { "add_sub_menu", AddSubMenu },
         { "change_to_menu_entry", ChangeToMenuEntry },

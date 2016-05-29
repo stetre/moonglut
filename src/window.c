@@ -114,7 +114,7 @@ int windowEnterGameMode(lua_State *L)
     }
 #endif
 
-static int CreateWindow(lua_State *L)
+static int CreateWindowXXX(lua_State *L)
     {
     int id;
     win_t *win;
@@ -150,7 +150,7 @@ static int CreateSubWindow(lua_State *L)
     return 1;
     }
 
-static int DestroyWindow(lua_State *L)
+static int DestroyWindowXXX(lua_State *L)
     {
     int id = luaL_checkinteger(L, 1);
     if(win_search(id) == NULL)
@@ -168,7 +168,7 @@ static int SetWindow(lua_State *L)
     return 0;
     }
 
-static int GetWindow(lua_State *L)
+static int GetWindowXXX(lua_State *L)
     {
     lua_pushinteger(L, glutGetWindow());
     return 1;
@@ -212,7 +212,7 @@ static int PositionWindow(lua_State *L)
 
 /* Simple functions with no arguments */
 #define FUNCTION(func)          \
-static int func(lua_State *L)   \
+static int func##XXX(lua_State *L)   \
     {                           \
     (void)L; /* unused */       \
     PRINT(func);                \
@@ -279,21 +279,21 @@ static const struct luaL_Reg Functions[] =
         { "init_window_position", InitWindowPosition },
         { "init_window_size", InitWindowSize },
         { "action_on_window_close", ActionOnWindowClose },
-        { "create_window", CreateWindow },
+        { "create_window", CreateWindowXXX },
         { "create_sub_window", CreateSubWindow },
-        { "destroy_window", DestroyWindow },
+        { "destroy_window", DestroyWindowXXX },
         { "set_window", SetWindow },
-        { "get_window", GetWindow },
+        { "get_window", GetWindowXXX },
         { "set_window_title", SetWindowTitle },
         { "set_icon_title", SetIconTitle },
         { "reshape_window", ReshapeWindow },
         { "position_window", PositionWindow },
-        { "show_window", ShowWindow },
-        { "hide_window", HideWindow },
-        { "iconify_window", IconifyWindow },
-        { "push_window", PushWindow },
-        { "pop_window", PopWindow },
-        { "full_screen_toggle", FullScreenToggle },
+        { "show_window", ShowWindowXXX },
+        { "hide_window", HideWindowXXX },
+        { "iconify_window", IconifyWindowXXX },
+        { "push_window", PushWindowXXX },
+        { "pop_window", PopWindowXXX },
+        { "full_screen_toggle", FullScreenToggleXXX },
 #if 0 /* could have used these instead of win.c database... */
         { "GetWindowData", GetWindowData }, void* glutGetWindowData( void );
         { "SetWindowData", SetWindowData }, void  glutSetWindowData(void* data);

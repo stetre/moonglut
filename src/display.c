@@ -73,14 +73,14 @@ static int PostWindowRedisplay(lua_State *L)
     }
 
 VOID_FUNC(PostRedisplay)
-VOID_FUNC(SwapBuffers)
+static int SwapBuffersXXX(lua_State *L) { (void)L; glutSwapBuffers(); return 0; }
 
 static const struct luaL_Reg Functions[] = 
     {
         { "init_display_mode", InitDisplayMode },
         { "post_window_redisplay", PostWindowRedisplay },
         { "post_redisplay", PostRedisplay },
-        { "swap_buffers", SwapBuffers },
+        { "swap_buffers", SwapBuffersXXX },
         { NULL, NULL } /* sentinel */
     };
 

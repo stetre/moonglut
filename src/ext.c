@@ -29,7 +29,7 @@
 
 #include "internal.h"
 
-NOT_IMPLEMENTED(GetProcAddress) //GLUTproc glutGetProcAddress( const char *procName );
+NOT_IMPLEMENTED(GetProcAddressXXX) //GLUTproc glutGetProcAddress( const char *procName );
 
 #if GLUT_HAS_MULTI
 NOT_IMPLEMENTED(MultiEntryFunc) //void glutMultiEntryFunc(void(*callback)(int,int));
@@ -40,7 +40,7 @@ NOT_IMPLEMENTED(MultiPassiveFunc) //void glutMultiPassiveFunc(void(*callback)(in
 
 static const struct luaL_Reg Functions[] = 
     {
-        { "get_proc_address", GetProcAddress },
+        { "get_proc_address", GetProcAddressXXX },
 #if GLUT_HAS_MULTI
         { "multi_entry_func", MultiEntryFunc },
         { "multi_button_func", MultiButtonFunc },

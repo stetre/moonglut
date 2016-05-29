@@ -21,6 +21,12 @@ https://www.opengl.org/resources/libraries/glut/spec3/spec3.html[GLUT API docume
 
 === Getting and installing
 
+For installation intructions, refer to the README file in the 
+https://github.com/stetre/moonglut[*MoonGLUT official repository*]
+on GitHub.
+
+////
+
 The *official repository* of MoonGLUT is on GitHub at the following link:
 *https://github.com/stetre/moonglut* .
 
@@ -54,6 +60,7 @@ in `/home/joe/local`:
 [moonglut-0.1]$ make
 [moonglut-0.1]$ make install PREFIX=/home/joe/local
 ----
+////
 
 === Module organization
 

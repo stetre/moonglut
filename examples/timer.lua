@@ -22,4 +22,6 @@ end
 
 glut.timer_func(0, expired, 0)
 
+glut.display_func(function() end)
+
 glut.main_loop()
