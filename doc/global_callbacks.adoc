@@ -1,35 +1,31 @@
 
 === Global Callback Registration Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#GlobalCallback[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000[GLUT].#
 
-'''
+
 [[glut.timer_func]]
-* *glut.timer_func* (_msec, _func_, _arg_) +
- +
-Binding to *glutTimerFunc*.
-The _func_ callback is executed as *_func(arg)_*.
+* *timer_func*(_msec, _func_, _arg_) +
+[small]#Binding to *glutTimerFunc*. +
+The _func_ callback is executed as *_func(arg)_*.#
 
-'''
+
 [[glut.idle_func]]
-* *glut.idle_func* (_func_) +
- +
-Binding to *glutIdleFunc*.
-The _func_ callback is executed as *_func(window_id, menu_id)_*.
+* *idle_func*(_func_) +
+[small]#Binding to *glutIdleFunc*. +
+The _func_ callback is executed as *_func(window_id, menu_id)_*.#
 
-'''
+
 [[glut.menu_status_func]]
-* *glut.menu_status_func* ([_func_]) +
- +
-Binding to *glutMenuStatusFunc*.
+* *menu_status_func*([_func_]) +
+[small]#Binding to *glutMenuStatusFunc*. +
 The _func_ callback is executed as *_func(status, x, y)_*, where _status_ is
-a string that may be either '_in use_' or '_not in use_'.
+a string that may be either '_in use_' or '_not in use_'.#
 
 
 ////
 glutMenuStateFunc	DEPRECATED
 ////
-<<<
 

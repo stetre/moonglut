@@ -2,121 +2,89 @@
 
 === Window Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#Window[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].#
 
-'''
+
 [[glut.create_window]]
-* *glut.create_window* (_title_) +
--> _window_id_ +
- +
-Binding to *glutCreateWindow*.
+* _window_id_ = *create_window*(_title_) +
+[small]#Binding to *glutCreateWindow*.#
 
-'''
+
 [[glut.]]
-* *glut.create_sub_window* (_parent_id_, _x_,  _y_, _width_, _height_) +
--> _window_id_ +
- +
-Binding to *glutCreateSubwindow*.
+* _window_id_ = *create_sub_window*(_parent_id_, _x_,  _y_, _width_, _height_) +
+[small]#Binding to *glutCreateSubwindow*.#
 
-'''
+
 [[glut.destroy_window]]
-* *glut.destroy_window* (_window_id_) +
- +
-Binding to *glutDestroyWindow*.
+* *destroy_window*(_window_id_) +
+[small]#Binding to *glutDestroyWindow*.#
 
 
-'''
 [[glut.set_window]]
-* *glut.set_window* (_window_id_) +
- +
-Binding to *glutSetWindow*.
+* *set_window*(_window_id_) +
+[small]#Binding to *glutSetWindow*.#
 
 
-'''
 [[glut.get_window]]
-* *glut.get_window* ( ) +
--> _window_id_ +
- +
-Binding to *glutGetWindow*.
+* _window_id_ = *get_window*( ) +
+[small]#Binding to *glutGetWindow*.#
 
 
-'''
 [[glut.set_window_title]]
-* *glut.set_window_title* (_title_) +
- +
-Binding to *glutSetWindowTitle*.
+* *set_window_title*(_title_) +
+[small]#Binding to *glutSetWindowTitle*.#
 
 
-'''
 [[glut.set_icon_title]]
-* *glut.set_icon_title* (_title_) +
- +
-Binding to *glutSetIconTitle*.
+* *set_icon_title*(_title_) +
+[small]#Binding to *glutSetIconTitle*.#
 
 
-'''
 [[glut.reshape_window]]
-* *glut.reshape_window* (_width_, _height_) +
- +
-Binding to *glutReshapeWindow*.
+* *reshape_window*(_width_, _height_) +
+[small]#Binding to *glutReshapeWindow*.#
 
-'''
+
 [[glut.position_window]]
-* *glut.position_window* (_x_, _y_) +
- +
-Binding to *glutPositionWindow*.
+* *position_window*(_x_, _y_) +
+[small]#Binding to *glutPositionWindow*.#
 
 
-'''
 [[glut.show_window]]
-* *glut.show_window* ( ) +
- +
-Binding to *glutShowWindow*.
+* *show_window*( ) +
+[small]#Binding to *glutShowWindow*.#
 
 
-'''
 [[glut.hide_window]]
-* *glut.hide_window* ( ) +
- +
-Binding to *glutHideWindow*.
+* *hide_window*( ) +
+[small]#Binding to *glutHideWindow*.#
 
 
-'''
 [[glut.iconify_window]]
-* *glut.iconify_window* ( ) +
- +
-Binding to *glutIconifyWindow*.
+* *iconify_window*( ) +
+[small]#Binding to *glutIconifyWindow*.#
 
 
-'''
 [[glut.push_window]]
-* *glut.push_window* ( ) +
- +
-Binding to *glutPushWindow*.
+* *push_window*( ) +
+[small]#Binding to *glutPushWindow*.#
 
 
-'''
 [[glut.pop_window]]
-* *glut.pop_window* ( ) +
- +
-Binding to *glutPopWindow*.
+* *pop_window*( ) +
+[small]#Binding to *glutPopWindow*.#
 
 
-'''
 [[glut.full_screen]]
-* *glut.full_screen* (_boolean_) +
--> _boolean_ +
- +
-Binding to *glutFullScreen* and to *glutLeaveFullScreen*.
+* _boolean_ = *full_screen*(_boolean_) +
+[small]#Binding to *glutFullScreen* and to *glutLeaveFullScreen*.#
 
-'''
+
 [[glut.full_screen_toggle]]
-* *glut.full_screen_toggle* () +
- +
-Binding to *glutFullScreenToggle*.
+* *full_screen_toggle*() +
+[small]#Binding to *glutFullScreenToggle*.#
 
 
-<<<
 

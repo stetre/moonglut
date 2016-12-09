@@ -1,92 +1,71 @@
 
 === State Setting and Retrieval Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#StateSetting[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node69.html#SECTION000100000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node69.html#SECTION000100000000000000000[GLUT].#
 
-'''
+
 [[glut.init_state]]
-* *glut.init_state* ( ) +
--> _boolean_ +
- +
-Binding to *glutGet(GLUT_INIT_STATE)*. 
+* _boolean_ = *init_state*( ) +
+[small]#Binding to *glutGet(GLUT_INIT_STATE)*. #
 
-'''
+
 [[glut.version]]
-* *glut.version* ( ) +
--> _major_, _minor_, _micro_ +
- +
-Binding to *glutGet(GLUT_VERSION)*. 
+* _major_, _minor_, _micro_ = *version*( ) +
+[small]#Binding to *glutGet(GLUT_VERSION)*. #
 
-'''
+
 [[glut.action_on_window_close]]
-* *glut.action_on_window_close* ([_action_]) +
--> _action_ +
- +
-Binding to *glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE)*. 
-The _action_ argument (a string) must be one amongst '_exit_', '_return_', and '_continue_'.
+* _action_ = *action_on_window_close*([_action_]) +
+[small]#Binding to *glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE)*. +
+The _action_ argument (a string) must be one amongst '_exit_', '_return_', and '_continue_'.#
 
-'''
+
 [[glut.use_current_context]]
-* *glut.use_current_context* ([_boolean_]) +
--> _boolean_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_RENDERING_CONTEXT*.
+* _boolean_ = *use_current_context*([_boolean_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_RENDERING_CONTEXT*.#
  
-'''
+
 [[glut.multisample]]
-* *glut.multisample* ([_nsamples_]) +
--> _nsamples_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_MULTISAMPLE*.
+* _nsamples_ = *multisample*([_nsamples_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_MULTISAMPLE*.#
 
-'''
+
 [[glut.aux_buffers]]
-* *glut.aux_buffers* ([_nbuffers_]) +
--> _nbuffers_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_AUX*.
+* _nbuffers_ = *aux_buffers*([_nbuffers_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_AUX*.#
 
-'''
+
 [[glut.screen]]
-* *glut.screen* ( ) +
--> _width_, _height_, _width_mm_, _height_mm_ +
- +
-Binding to *glutGet(what)* where _what_ = *GLUT_SCREEN_WIDTH*, 
-*GLUT_SCREEN_HEIGHT*, *GLUT_SCREEN_WIDTH_MM* and *GLUT_SCREEN_HEIGHT_MM*.
+* _width_, _height_, _width_mm_, _height_mm_ = *screen*( ) +
+[small]#Binding to *glutGet(what)* where _what_ = *GLUT_SCREEN_WIDTH*, 
+*GLUT_SCREEN_HEIGHT*, *GLUT_SCREEN_WIDTH_MM* and *GLUT_SCREEN_HEIGHT_MM*.#
 
-'''
+
 [[glut.skip_stale_motion_events]]
-* *glut.skip_stale_motion_events* ([_boolean_]) +
--> _boolean_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_SKIP_STALE_MOTION_EVENTS*.
+* _boolean_ = *skip_stale_motion_events*([_boolean_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_SKIP_STALE_MOTION_EVENTS*.#
 
-'''
+
 [[glut.stroke_font_draw_join_dots]]
-* *glut.stroke_font_draw_join_dots* ([_boolean_]) +
--> _boolean_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_STROKE_FONT_DRAW_JOIN_DOTS*.
+* _boolean_ = *stroke_font_draw_join_dots*([_boolean_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_STROKE_FONT_DRAW_JOIN_DOTS*.#
 
-'''
+
 [[glut.geometry_visualize_normals]]
-* *glut.geometry_visualize_normals* ([_boolean_]) +
--> _boolean_ +
- +
-Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_GEOMETRY_VISUALIZE_NORMALS*.
+* _boolean_ = *geometry_visualize_normals*([_boolean_]) +
+[small]#Binding to *glutGet(what)* and to *glutSetOption(what)* where _what_ = *GLUT_GEOMETRY_VISUALIZE_NORMALS*.#
 
-'''
-Other bindings to *glutGet(what)* and to *glutSetOption(what)*: 
 
-- _what_ = *GLUT_INIT_WINDOW_X*: see <<glut.init_window_position, glut.init_window_position>>
-- _what_ = *GLUT_INIT_WINDOW_Y*: see <<glut.init_window_position, glut.init_window_position>>
-- _what_ = *GLUT_INIT_WINDOW_WIDTH*: see <<glut.init_window_size, glut.init_window_size>>
-- _what_ = *GLUT_INIT_WINDOW_HEIGHT*: see <<glut.init_window_size, glut.init_window_size>>
-- _what_ = *GLUT_INIT_DISPLAY_MODE*: see <<glut.init_display_mode, glut.init_display_mode>>
-- _what_ = *GLUT_WINDOW_CURSOR*: see <<glut.cursor, glut.cursor>>
-- _what_ = *GLUT_FULL_SCREEN*: see <<glut.full_screen, glut.full_screen>>
+[small]#Other bindings to *glutGet(what)* and to *glutSetOption(what)*: +
+- _what_ = *GLUT_INIT_WINDOW_X*: see <<glut.init_window_position, glut.init_window_position>> +
+- _what_ = *GLUT_INIT_WINDOW_Y*: see <<glut.init_window_position, glut.init_window_position>> +
+- _what_ = *GLUT_INIT_WINDOW_WIDTH*: see <<glut.init_window_size, glut.init_window_size>> +
+- _what_ = *GLUT_INIT_WINDOW_HEIGHT*: see <<glut.init_window_size, glut.init_window_size>> +
+- _what_ = *GLUT_INIT_DISPLAY_MODE*: see <<glut.init_display_mode, glut.init_display_mode>> +
+- _what_ = *GLUT_WINDOW_CURSOR*: see <<glut.cursor, glut.cursor>> +
+- _what_ = *GLUT_FULL_SCREEN*: see <<glut.full_screen, glut.full_screen>>#
 
 ////
 - _what_ = **: see <<glut., glut.>>
@@ -118,10 +97,9 @@ glutLayerGet NA
 glutGetProcAddress NA
 
 8yy
-'''
+
 [[glut.]]
-* *glut.* ([_arg_]) +
--> _arg_ +
+* _arg_ = **([_arg_]) +
  +
 Binding to *glutGet()*. 
 Same as *glutGet()*. 
@@ -130,5 +108,4 @@ With no arguments, only returns the current values.
 
 
 ////
-<<<
 

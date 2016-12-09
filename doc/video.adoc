@@ -1,8 +1,8 @@
 
 === Video Resize Functions
 
-References: 
-http://freeglut.sourceforge.net/docs/api.php#VideoResize[FreeGLUT].
+[small]#References: 
+http://freeglut.sourceforge.net/docs/api.php#VideoResize[FreeGLUT].#
 
 Not supported.
 
@@ -15,5 +15,5 @@ glutVideoResize	NA
 glutVideoPan	NA
 
 ////
-<<<
+
 

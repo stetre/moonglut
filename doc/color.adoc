@@ -1,31 +1,24 @@
 
 === Color Map Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#ColorMap[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node65.html#SECTION00090000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node65.html#SECTION00090000000000000000[GLUT].#
 
-'''
+
 [[glut.set_color]]
-* *glut.set_color* (_cell_ [, _red_, _green_, _blue_]) +
--> _red_, _green_, _blue_ +
- +
-Binding to *glutSetColor*.
-With no color arguments, only returns the current values.
+* _red_, _green_, _blue_ = *set_color*(_cell_ [, _red_, _green_, _blue_]) +
+[small]#Binding to *glutSetColor*. +
+With no color arguments, only returns the current values.#
 
-'''
+
 [[glut.get_color]]
-* *glut.get_color* (_cell_) +
--> _red_, _green_, _blue_ +
- +
-Binding to *glutGetColor* (actually an alias of <<glut.set_color, glut.set_color>>).
+* _red_, _green_, _blue_ = *get_color*(_cell_) +
+[small]#Binding to *glutGetColor*(actually an alias of <<glut.set_color, glut.set_color>>).#
 
-'''
+
 [[glut.copy_colormap]]
-* *glut.copy_colormap* ([_window_id_]) +
- +
-Binding to *glutCopyColormap*.
+* *copy_colormap*([_window_id_]) +
+[small]#Binding to *glutCopyColormap*.#
 
-
-<<<
 

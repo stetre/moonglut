@@ -1,90 +1,66 @@
 
 === Font Rendering Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#FontRendering[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node75.html#SECTION000110000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node75.html#SECTION000110000000000000000[GLUT].#
 
-In the functions that follow, the _font_ argument is a string amongst:
 
-Bitmap fonts:: '_bitmap 9 by 15_', '_bitmap 8 by 13_', '_bitmap times roman 10_', '_bitmap times roman 24_', '_bitmap helvetica 10_', '_bitmap helvetica 12_' and '_bitmap helvetica 18_'.
-Stroke fonts:: '_stroke roman_' and '_stroke mono roman_'.
+[small]#In the functions that follow, the _font_ argument is a string amongst: +
+*Bitmap fonts*: '_bitmap&nbsp;9&nbsp;by&nbsp;15_', '_bitmap&nbsp;8&nbsp;by&nbsp;13_', '_bitmap&nbsp;times&nbsp;roman&nbsp;10_', '_bitmap&nbsp;times&nbsp;roman&nbsp;24_', '_bitmap&nbsp;helvetica&nbsp;10_', '_bitmap&nbsp;helvetica&nbsp;12_' and '_bitmap&nbsp;helvetica&nbsp;18_'. +
+*Stroke fonts*: '_stroke&nbsp;roman_' and '_stroke&nbsp;mono&nbsp;roman_'.#
 
-'''
+
 [[glut.bitmap_character]]
-* *glut.bitmap_character* (_font_, _char_) +
- +
-Binding to *glutBitmapCharacter*.
+* *bitmap_character*(_font_, _char_) +
+[small]#Binding to *glutBitmapCharacter*.#
 
-'''
+
 [[glut.bitmap_string]]
-* *glut.bitmap_string* (_font_, _string_) +
- +
-Binding to *glutBitmapString*.
+* *bitmap_string*(_font_, _string_) +
+[small]#Binding to *glutBitmapString*.#
 
-'''
+
 [[glut.bitmap_width]]
-* *glut.bitmap_width* (_font_, _char_) +
--> _width_ +
- +
-Binding to *glutBitmapWidth*.
+* _width_ = *bitmap_width*(_font_, _char_) +
+[small]#Binding to *glutBitmapWidth*.#
 
 
-'''
 [[glut.bitmap_length]]
-* *glut.bitmap_length* (_font_, _string_) +
--> _length_ +
- +
-Binding to *glutBitmapLength*.
+* _length_ = *bitmap_length*(_font_, _string_) +
+[small]#Binding to *glutBitmapLength*.#
 
-'''
+
 [[glut.bitmap_height]]
-* *glut.bitmap_height* (_font_) +
--> _height_ +
- +
-Binding to *glutBitmapHeight*.
+* _height_ = *bitmap_height*(_font_) +
+[small]#Binding to *glutBitmapHeight*.#
 
 
-'''
 [[glut.stroke_character]]
-* *glut.stroke_character* (_font_, _char_) +
- +
-Binding to *glutStrokeCharacter*.
+* *stroke_character*(_font_, _char_) +
+[small]#Binding to *glutStrokeCharacter*.#
 
 
-'''
 [[glut.stroke_string]]
-* *glut.stroke_string* (_font_, _string_) +
- +
-Binding to *glutStrokeString*.
+* *stroke_string*(_font_, _string_) +
+[small]#Binding to *glutStrokeString*.#
 
-
-'''
 [[glut.stroke_width]]
-* *glut.stroke_width* (_font_, _char_) +
--> _width_ +
- +
-Binding to *glutStrokeWidth*.
+* _width_ = *stroke_width*(_font_, _char_) +
+[small]#Binding to *glutStrokeWidth*.#
 
 
-'''
 [[glut.stroke_length]]
-* *glut.stroke_length* (_font_, _string_) +
--> _length_ +
- +
-Binding to *glutStrokeLength*.
+* _length_ = *stroke_length*(_font_, _string_) +
+[small]#Binding to *glutStrokeLength*.#
 
-'''
+
 [[glut.stroke_height]]
-* *glut.stroke_height* (_font_) +
--> _height_ +
- +
-Binding to *glutStrokeHeight*.
+* _height_ = *stroke_height*(_font_) +
+[small]#Binding to *glutStrokeHeight*.#
 
 ////
 glutStrokeWidthf NA
 glutStrokeLengthf NA
 ////
-
-<<<
 

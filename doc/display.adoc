@@ -1,28 +1,23 @@
 
 === Display Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#Display[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].#
 
-'''
+
 [[glut.post_redisplay]]
-* *glut.post_redisplay* ( ) +
- +
-Binding to *glutPostRedisplay*.
+* *post_redisplay*( ) +
+[small]#Binding to *glutPostRedisplay*.#
 
-'''
+
 [[glut.post_window_redisplay]]
-* *glut.post_window_redisplay* (_window_id_) +
- +
-Binding to *glutPostWindowRedisplay*.
+* *post_window_redisplay*(_window_id_) +
+[small]#Binding to *glutPostWindowRedisplay*.#
 
-'''
+
 [[glut.swap_buffers]]
-* *glut.swap_buffers* ( ) +
- +
-Binding to *glutSwapBuffers*.
+* *swap_buffers*( ) +
+[small]#Binding to *glutSwapBuffers*.#
 
-
-<<<
 

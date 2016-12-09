@@ -89,4 +89,3 @@ credits to the original author).
 The copyright notice is in the LICENSE file in the base directory
 of the https://github.com/stetre/moonglut[official repository] on GitHub.
 
-<<<

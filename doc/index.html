@@ -870,7 +870,6 @@ credits to the original author).
 The copyright notice is in the LICENSE file in the base directory
 of the <a href="https://github.com/stetre/moonglut">official repository</a> on GitHub.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
@@ -880,588 +879,475 @@ of the <a href="https://github.com/stetre/moonglut">official repository</a> on G
 <div class="sect2">
 <h3 id="_initialization_functions">Initialization Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#Initialization">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node9.html#SECTION00030000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node9.html#SECTION00030000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.init" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init</strong> ([<em>arg</em>])<br>
-&#8594; <em>arg</em><br>
-<br>
-Binding to <strong>glutInit</strong>. The optional <em>arg</em> argument must be a sequence of strings
+<p><em>arg</em> = <strong>init</strong>([<em>arg</em>])<br>
+<span class="small">Binding to <strong>glutInit</strong>.<br>
+The optional <em>arg</em> argument must be a sequence of strings
 (typically the table of arguments passed to the Lua script at the command line).
-Returns a copy of the same table stripped from any option recognized by FreeGLUT.<br></p>
+Returns a copy of the same table stripped from any option recognized by FreeGLUT.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_context" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_context</strong> (<em>major</em>, <em>minor</em>, <em>profile</em> [, <em>debug</em>])<br>
-&#8594; <em>major</em>, <em>minor</em>, <em>profile</em>, <em>debug</em><br>
-<br>
-Binding to <strong>glutInitContextFlags</strong>, <strong>glutInitContextProfile</strong>, and <strong>glutInitContextVersion</strong>.
+<p><em>major</em>, <em>minor</em>, <em>profile</em>, <em>debug</em> = <strong>init_context</strong>(<em>major</em>, <em>minor</em>, <em>profile</em> [, <em>debug</em>])<br>
+<span class="small">Binding to <strong>glutInitContextFlags</strong>, <strong>glutInitContextProfile</strong>, and <strong>glutInitContextVersion</strong>.<br>
 The <em>major</em> and <em>minor</em> parameters are the context version numbers. The <em>profile</em> parameter
 (a string) may be one amongst: '<em>core</em>', '<em>compatible</em>' and '<em>forward compatible</em>'
 (corresponding to, respectively: 'all features of the current release', 'all features ever',
 'only non deprecated features').
 If the <em>debug</em> parameter (a boolean) is <em>true</em>, then the debug flag is set.
-With no arguments, this function only returns the current values.</p>
+With no arguments, this function only returns the current values.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_window_position" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_window_position</strong> ([<em>x</em>, <em>y</em>])<br>
-&#8594; <em>x</em>, <em>y</em><br>
-<br>
-Binding to <strong>glutInitWindowPosition</strong>.
-With no arguments, only returns the current values.</p>
+<p><em>x</em>, <em>y</em> = <strong>init_window_position</strong>([<em>x</em>, <em>y</em>])<br>
+<span class="small">Binding to <strong>glutInitWindowPosition</strong>.<br>
+With no arguments, only returns the current values.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_window_size" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_window_size</strong> ([<em>width</em>, <em>height</em>])<br>
-&#8594; <em>width</em>, <em>height</em><br>
-<br>
-Binding to <strong>glutInitWindowSize</strong>.
-With no arguments, only returns the current values.</p>
+<p><em>width</em>, <em>height</em> = <strong>init_window_size</strong>([<em>width</em>, <em>height</em>])<br>
+<span class="small">Binding to <strong>glutInitWindowSize</strong>.<br>
+With no arguments, only returns the current values.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_display_mode" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_display_mode</strong> ([<em>opt</em>, <em>&#8230;&#8203;</em>])<br>
-&#8594; <em>opt</em>, <em>&#8230;&#8203;</em><br>
-<br>
-Binding to <strong>glutInitDisplayMode</strong>. Accepts a list of options (strings).
+<p><em>opt</em>, <em>&#8230;&#8203;</em> = <strong>init_display_mode</strong>([<em>opt</em>, <em>&#8230;&#8203;</em>])<br>
+<span class="small">Binding to <strong>glutInitDisplayMode</strong>. Accepts a list of options (strings).<br>
 Valid options are:
-'<em>rgb</em>', '<em>rgba</em>', '<em>index</em>', '<em>single</em>', '<em>double</em>', '<em>accum</em>', '<em>alpha</em>', '<em>depth</em>', '<em>stencil</em>', '<em>multisample</em>', '<em>stereo</em>' and '<em>luminance</em>'.
-With no arguments, only returns the current options.</p>
+'<em>rgb</em>', '<em>rgba</em>', '<em>index</em>', '<em>single</em>', '<em>double</em>', '<em>accum</em>', '<em>alpha</em>', '<em>depth</em>', '<em>stencil</em>', '<em>multisample</em>', '<em>stereo</em>' and '<em>luminance</em>'.<br>
+With no arguments, only returns the current options.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_error_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_error_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutInitErrorFunc</strong>. The <em>func</em> callback is executed as <strong><em>func(message)</em></strong>
-where <em>message</em> is a string.</p>
+<p><strong>init_error_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutInitErrorFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(message)</em></strong> where <em>message</em> is a string.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.init_warning_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_warning_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutInitWarningFunc</strong>. The <em>func</em> callback is executed as <strong><em>func(message)</em></strong>
-where <em>message</em> is a string.</p>
+<p><strong>init_warning_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutInitWarningFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(message)</em></strong> where <em>message</em> is a string.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_event_processing_functions">Event Processing Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#EventProcessing">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node13.html#SECTION00040000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node13.html#SECTION00040000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.main_loop" class="ulist">
 <ul>
 <li>
-<p><strong>glut.main_loop</strong> ( )<br>
-<br>
-Binding to <strong>glutMainLoop</strong>.</p>
+<p><strong>main_loop</strong>( )<br>
+<span class="small">Binding to <strong>glutMainLoop</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.main_loop_event" class="ulist">
 <ul>
 <li>
-<p><strong>glut.main_loop_event</strong> ( )<br>
-<br>
-Binding to <strong>glutMainLoopEvent</strong>.</p>
+<p><strong>main_loop_event</strong>( )<br>
+<span class="small">Binding to <strong>glutMainLoopEvent</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.leave_main_loop" class="ulist">
 <ul>
 <li>
-<p><strong>glut.leave_main_loop</strong> ( )<br>
-<br>
-Binding to <strong>glutLeaveMainLoop</strong>.</p>
+<p><strong>leave_main_loop</strong>( )<br>
+<span class="small">Binding to <strong>glutLeaveMainLoop</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.exit" class="ulist">
 <ul>
 <li>
-<p><strong>glut.exit</strong> ( )<br>
-<br>
-Binding to <strong>glutExit</strong>.</p>
+<p><strong>exit</strong>( )<br>
+<span class="small">Binding to <strong>glutExit</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_window_functions">Window Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#Window">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.create_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.create_window</strong> (<em>title</em>)<br>
-&#8594; <em>window_id</em><br>
-<br>
-Binding to <strong>glutCreateWindow</strong>.</p>
+<p><em>window_id</em> = <strong>create_window</strong>(<em>title</em>)<br>
+<span class="small">Binding to <strong>glutCreateWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut." class="ulist">
 <ul>
 <li>
-<p><strong>glut.create_sub_window</strong> (<em>parent_id</em>, <em>x</em>,  <em>y</em>, <em>width</em>, <em>height</em>)<br>
-&#8594; <em>window_id</em><br>
-<br>
-Binding to <strong>glutCreateSubwindow</strong>.</p>
+<p><em>window_id</em> = <strong>create_sub_window</strong>(<em>parent_id</em>, <em>x</em>,  <em>y</em>, <em>width</em>, <em>height</em>)<br>
+<span class="small">Binding to <strong>glutCreateSubwindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.destroy_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.destroy_window</strong> (<em>window_id</em>)<br>
-<br>
-Binding to <strong>glutDestroyWindow</strong>.</p>
+<p><strong>destroy_window</strong>(<em>window_id</em>)<br>
+<span class="small">Binding to <strong>glutDestroyWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.set_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_window</strong> (<em>window_id</em>)<br>
-<br>
-Binding to <strong>glutSetWindow</strong>.</p>
+<p><strong>set_window</strong>(<em>window_id</em>)<br>
+<span class="small">Binding to <strong>glutSetWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.get_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.get_window</strong> ( )<br>
-&#8594; <em>window_id</em><br>
-<br>
-Binding to <strong>glutGetWindow</strong>.</p>
+<p><em>window_id</em> = <strong>get_window</strong>( )<br>
+<span class="small">Binding to <strong>glutGetWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.set_window_title" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_window_title</strong> (<em>title</em>)<br>
-<br>
-Binding to <strong>glutSetWindowTitle</strong>.</p>
+<p><strong>set_window_title</strong>(<em>title</em>)<br>
+<span class="small">Binding to <strong>glutSetWindowTitle</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.set_icon_title" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_icon_title</strong> (<em>title</em>)<br>
-<br>
-Binding to <strong>glutSetIconTitle</strong>.</p>
+<p><strong>set_icon_title</strong>(<em>title</em>)<br>
+<span class="small">Binding to <strong>glutSetIconTitle</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.reshape_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.reshape_window</strong> (<em>width</em>, <em>height</em>)<br>
-<br>
-Binding to <strong>glutReshapeWindow</strong>.</p>
+<p><strong>reshape_window</strong>(<em>width</em>, <em>height</em>)<br>
+<span class="small">Binding to <strong>glutReshapeWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.position_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.position_window</strong> (<em>x</em>, <em>y</em>)<br>
-<br>
-Binding to <strong>glutPositionWindow</strong>.</p>
+<p><strong>position_window</strong>(<em>x</em>, <em>y</em>)<br>
+<span class="small">Binding to <strong>glutPositionWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.show_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.show_window</strong> ( )<br>
-<br>
-Binding to <strong>glutShowWindow</strong>.</p>
+<p><strong>show_window</strong>( )<br>
+<span class="small">Binding to <strong>glutShowWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.hide_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.hide_window</strong> ( )<br>
-<br>
-Binding to <strong>glutHideWindow</strong>.</p>
+<p><strong>hide_window</strong>( )<br>
+<span class="small">Binding to <strong>glutHideWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.iconify_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.iconify_window</strong> ( )<br>
-<br>
-Binding to <strong>glutIconifyWindow</strong>.</p>
+<p><strong>iconify_window</strong>( )<br>
+<span class="small">Binding to <strong>glutIconifyWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.push_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.push_window</strong> ( )<br>
-<br>
-Binding to <strong>glutPushWindow</strong>.</p>
+<p><strong>push_window</strong>( )<br>
+<span class="small">Binding to <strong>glutPushWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.pop_window" class="ulist">
 <ul>
 <li>
-<p><strong>glut.pop_window</strong> ( )<br>
-<br>
-Binding to <strong>glutPopWindow</strong>.</p>
+<p><strong>pop_window</strong>( )<br>
+<span class="small">Binding to <strong>glutPopWindow</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.full_screen" class="ulist">
 <ul>
 <li>
-<p><strong>glut.full_screen</strong> (<em>boolean</em>)<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutFullScreen</strong> and to <strong>glutLeaveFullScreen</strong>.</p>
+<p><em>boolean</em> = <strong>full_screen</strong>(<em>boolean</em>)<br>
+<span class="small">Binding to <strong>glutFullScreen</strong> and to <strong>glutLeaveFullScreen</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.full_screen_toggle" class="ulist">
 <ul>
 <li>
-<p><strong>glut.full_screen_toggle</strong> ()<br>
-<br>
-Binding to <strong>glutFullScreenToggle</strong>.</p>
+<p><strong>full_screen_toggle</strong>()<br>
+<span class="small">Binding to <strong>glutFullScreenToggle</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_display_functions">Display Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#Display">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.post_redisplay" class="ulist">
 <ul>
 <li>
-<p><strong>glut.post_redisplay</strong> ( )<br>
-<br>
-Binding to <strong>glutPostRedisplay</strong>.</p>
+<p><strong>post_redisplay</strong>( )<br>
+<span class="small">Binding to <strong>glutPostRedisplay</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.post_window_redisplay" class="ulist">
 <ul>
 <li>
-<p><strong>glut.post_window_redisplay</strong> (<em>window_id</em>)<br>
-<br>
-Binding to <strong>glutPostWindowRedisplay</strong>.</p>
+<p><strong>post_window_redisplay</strong>(<em>window_id</em>)<br>
+<span class="small">Binding to <strong>glutPostWindowRedisplay</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.swap_buffers" class="ulist">
 <ul>
 <li>
-<p><strong>glut.swap_buffers</strong> ( )<br>
-<br>
-Binding to <strong>glutSwapBuffers</strong>.</p>
+<p><strong>swap_buffers</strong>( )<br>
+<span class="small">Binding to <strong>glutSwapBuffers</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_mouse_cursor_functions">Mouse Cursor Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#MouseCursor">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.cursor" class="ulist">
 <ul>
 <li>
-<p><strong>glut.cursor</strong> ([<em>cursor</em>])<br>
-&#8594; <em>cursor</em><br>
-<br>
-Binding to <strong>glutSetCursor</strong>.
+<p><em>cursor</em> = <strong>cursor</strong>([<em>cursor</em>])<br>
+<span class="small">Binding to <strong>glutSetCursor</strong>.<br>
 The optional <em>cursor</em> argument (a string) must be one of the following:
 '<em>right arrow</em>', '<em>left arrow</em>', '<em>info</em>', '<em>destroy</em>', '<em>help</em>', '<em>cycle</em>',
 '<em>spray</em>', '<em>wait</em>', '<em>text</em>', '<em>crosshair</em>', '<em>up down</em>', '<em>left right</em>',
 '<em>top side</em>', '<em>bottom side</em>', '<em>left side</em>', '<em>right side</em>', '<em>top left corner</em>',
 '<em>top right corner</em>', '<em>bottom right corner</em>', '<em>bottom left corner</em>', '<em>inherit</em>',
-'<em>none</em>', or '<em>full crosshair</em>'.
-With no arguments, only returns the current cursor.</p>
+'<em>none</em>', or '<em>full crosshair</em>'.<br>
+With no arguments, only returns the current cursor.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.warp_pointer" class="ulist">
 <ul>
 <li>
-<p><strong>glut.warp_pointer</strong> (<em>x</em>, <em>y</em>)<br>
-<br>
-Binding to <strong>glutWarpPointer</strong>.</p>
+<p><strong>warp_pointer</strong>(<em>x</em>, <em>y</em>)<br>
+<span class="small">Binding to <strong>glutWarpPointer</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_overlay_functions">Overlay Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#Overlay">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node29.html#SECTION00060000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node29.html#SECTION00060000000000000000">GLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Not supported.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_menu_functions">Menu Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#Menu">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node35.html#SECTION00070000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node35.html#SECTION00070000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.create_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.create_menu</strong> (<em>func</em>)<br>
-&#8594; <em>menu_id</em><br>
-<br>
-Binding to <strong>glutCreateMenu</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id, value)</em></strong>.</p>
+<p><em>menu_id</em> = <strong>create_menu</strong>(<em>func</em>)<br>
+<span class="small">Binding to <strong>glutCreateMenu</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id, value)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.destroy_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glutdestroy_menu.</strong> (<em>menu_id</em>)<br>
-<br>
-Binding to <strong>glutDestroyMenu</strong>.</p>
+<p><strong>destroy_menu</strong>(<em>menu_id</em>)<br>
+<span class="small">Binding to <strong>glutDestroyMenu</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.get_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.get_menu</strong> ( )<br>
-&#8594; <em>menu_id</em><br>
-<br>
-Binding to <strong>glutGetMenu</strong>.</p>
+<p><em>menu_id</em> = <strong>get_menu</strong>( )<br>
+<span class="small">Binding to <strong>glutGetMenu</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.set_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_menu</strong> (<em>menu_id</em>)<br>
-<br>
-Binding to <strong>glutSetMenu</strong>.</p>
+<p><strong>set_menu</strong>(<em>menu_id</em>)<br>
+<span class="small">Binding to <strong>glutSetMenu</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.add_menu_entry" class="ulist">
 <ul>
 <li>
-<p><strong>glut.add_menu_entry</strong> (<em>label</em>, <em>value</em>)<br>
-<br>
-Binding to <strong>glutAddMenuEntry</strong>.</p>
+<p><strong>add_menu_entry</strong>(<em>label</em>, <em>value</em>)<br>
+<span class="small">Binding to <strong>glutAddMenuEntry</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.add_sub_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.add_sub_menu</strong> (<em>label</em>, <em>submenu</em>)<br>
-<br>
-Binding to <strong>glutAddSubMenu</strong>.</p>
+<p><strong>add_sub_menu</strong>(<em>label</em>, <em>submenu</em>)<br>
+<span class="small">Binding to <strong>glutAddSubMenu</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.change_to_menu_entry" class="ulist">
 <ul>
 <li>
-<p><strong>glut.change_to_menu_entry</strong> (<em>item</em>, <em>label</em>, <em>value</em>)<br>
-<br>
-Binding to <strong>glutChangeToMenuEntry</strong>.</p>
+<p><strong>change_to_menu_entry</strong>(<em>item</em>, <em>label</em>, <em>value</em>)<br>
+<span class="small">Binding to <strong>glutChangeToMenuEntry</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.change_to_sub_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.change_to_sub_menu</strong> (<em>item</em>, <em>label</em>, <em>value</em>)<br>
-<br>
-Binding to <strong>glutChangeToSubMenu</strong>.</p>
+<p><strong>change_to_sub_menu</strong>(<em>item</em>, <em>label</em>, <em>value</em>)<br>
+<span class="small">Binding to <strong>glutChangeToSubMenu</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.remove_menu_item" class="ulist">
 <ul>
 <li>
-<p><strong>glut.remove_menu_item</strong> (<em>item</em>)<br>
-<br>
-Binding to <strong>glutRemoveMenuItem</strong>.</p>
+<p><strong>remove_menu_item</strong>(<em>item</em>)<br>
+<span class="small">Binding to <strong>glutRemoveMenuItem</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.attach_menu" class="ulist">
 <ul>
 <li>
-<p><strong>glut.attach_menu</strong> (<em>button</em>)<br></p>
-</li>
-<li>
-<p><strong>glut.detach_menu</strong> (<em>button</em>)<br>
-<br>
-Bindings to <strong>glutAttachMenu</strong> and to <strong>glutDetachMenu</strong>, respectively.
-The <em>button</em> argument (a string) must be one amongst '<em>left</em>', '<em>middle</em>', and '<em>right</em>'.</p>
+<p><strong>attach_menu</strong>(<em>button</em>)<br>
+<strong>detach_menu</strong>(<em>button</em>)<br>
+<span class="small">Bindings to <strong>glutAttachMenu</strong> and to <strong>glutDetachMenu</strong>, respectively.<br>
+The <em>button</em> argument (a string) must be one amongst '<em>left</em>', '<em>middle</em>', and '<em>right</em>'.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.menu_destroy_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.menu_destroy_func</strong> (<em>func</em>)<br>
-<br>
-Binding to <strong>glutMenuDestroyFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id)</em></strong>.</p>
+<p><strong>menu_destroy_func</strong>(<em>func</em>)<br>
+<span class="small">Binding to <strong>glutMenuDestroyFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_global_callback_registration_functions">Global Callback Registration Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#GlobalCallback">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.timer_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.timer_func</strong> (<em>msec, _func</em>, <em>arg</em>)<br>
-<br>
-Binding to <strong>glutTimerFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(arg)</em></strong>.</p>
+<p><strong>timer_func</strong>(<em>msec, _func</em>, <em>arg</em>)<br>
+<span class="small">Binding to <strong>glutTimerFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(arg)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.idle_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.idle_func</strong> (<em>func</em>)<br>
-<br>
-Binding to <strong>glutIdleFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id)</em></strong>.</p>
+<p><strong>idle_func</strong>(<em>func</em>)<br>
+<span class="small">Binding to <strong>glutIdleFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, menu_id)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.menu_status_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.menu_status_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutMenuStatusFunc</strong>.
+<p><strong>menu_status_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutMenuStatusFunc</strong>.<br>
 The <em>func</em> callback is executed as <strong><em>func(status, x, y)</em></strong>, where <em>status</em> is
-a string that may be either '<em>in use</em>' or '<em>not in use</em>'.</p>
+a string that may be either '<em>in use</em>' or '<em>not in use</em>'.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_window_specific_callback_registration_functions">Window-Specific Callback Registration Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#WindowCallback">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node45.html#SECTION00080000000000000000">GLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Registration functions can be invoked with no arguments in order to unregister
@@ -1475,601 +1361,458 @@ as first parameter (<em>window_id</em>).</p>
 <p>For callbacks that receive <em>x</em> and <em>y</em> parameters, these give the current position
 of the mouse cursor.</p>
 </div>
-<hr>
 <div id="glut.display_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.display_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutDisplayFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id)</em></strong>.</p>
+<p><strong>display_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutDisplayFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.reshape_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.reshape_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutReshapeFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, width, height)</em></strong>.</p>
+<p><strong>reshape_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutReshapeFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, width, height)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.close_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.close_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutCloseFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id)</em></strong>.</p>
+<p><strong>close_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutCloseFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.keyboard_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.keyboard_func</strong> ([<em>func</em>])<br></p>
-</li>
-<li>
-<p><strong>glut.keyboard_up_func</strong> ([<em>func</em>])<br>
-<br>
-Bindings to <strong>glutKeyboardFunc</strong> and to <strong>glutKeyboardUpFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, key, x, y, code)</em></strong>.
+<p><strong>keyboard_func</strong>([<em>func</em>])<br>
+<strong>keyboard_up_func</strong>([<em>func</em>])<br>
+<span class="small">Bindings to <strong>glutKeyboardFunc</strong> and to <strong>glutKeyboardUpFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, key, x, y, code)</em></strong>.<br>
 The <em>key</em> parameter (a string) is the pressed character if its ASCII code is between
 33 and 126 (letters, numbers etc), otherwise it is one amongst the following:
 '<em>nul</em>' (0), '<em>soh</em>' (1), '<em>stx</em>' (2), '<em>etx</em>' (3), '<em>eot</em>' (4), '<em>enq</em>' (5), '<em>ack</em>' (6),
 '<em>bel</em>' (7), '<em>bs</em>' (8), '<em>ht</em>' (9), '<em>nl</em>' (10), '<em>vt</em>' (11), '<em>ff</em>' (12), '<em>cr</em>' (13),
 '<em>so</em>' (14), '<em>si</em>' (15), '<em>dle</em>' (16), '<em>dc1</em>' (17), '<em>dc2</em>' (18), '<em>dc3</em>' (19), '<em>dc4</em>' (20),
 '<em>nak</em>' (21), '<em>syn</em>' (22), '<em>etb</em>' (23), '<em>can</em>' (24), '<em>em</em>' (25), '<em>sub</em>' (26), '<em>esc</em>' (27),
-'<em>fs</em>' (28), '<em>gs</em>' (29), '<em>rs</em>' (30), '<em>us</em>' (31), '<em>space</em>' (32), and '<em>del</em>' (127).
-For codes greater than 127, <em>string</em> = '<em>\&lt;code&gt;</em>'.
-The <em>code</em> parameter is the corresponding ASCII code.</p>
+'<em>fs</em>' (28), '<em>gs</em>' (29), '<em>rs</em>' (30), '<em>us</em>' (31), '<em>space</em>' (32), and '<em>del</em>' (127).<br>
+For codes greater than 127, <em>string</em> = '<em>\&lt;code&gt;</em>'.<br>
+The <em>code</em> parameter is the corresponding ASCII code.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.special_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.special_func</strong> ([<em>func</em>])<br></p>
-</li>
-<li>
-<p><strong>glut.special_up_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutSpecialFunc</strong> and to <strong>glutSpecialUpFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, key, x, y, code)</em></strong>.
+<p><strong>special_func</strong>([<em>func</em>])<br>
+<strong>special_up_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutSpecialFunc</strong> and to <strong>glutSpecialUpFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, key, x, y, code)</em></strong>.<br>
 The <em>key</em> parameter (a string) is one amongst:
 '<em>f1</em>' &#8230;&#8203; '<em>f12</em>', '<em>left</em>', '<em>right</em>', '<em>up</em>', '<em>down</em>', '<em>page-up</em>', '<em>page-down</em>',
 '<em>home</em>', '<em>end</em>', '<em>ins</em>', '<em>num-lock', '_begin</em>', '<em>del</em>', '<em>shift-l</em>', '<em>shift-r</em>',
-'<em>ctrl-l</em>', '<em>ctrl-r</em>', '<em>alt-l</em>' and '<em>alt-r</em>'.
-The <em>code</em> parameter is the corresponding GLUT_KEY_XXX code.</p>
+'<em>ctrl-l</em>', '<em>ctrl-r</em>', '<em>alt-l</em>' and '<em>alt-r</em>'.<br>
+The <em>code</em> parameter is the corresponding GLUT_KEY_XXX code.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.motion_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.motion_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutMotionFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, x, y)</em></strong>.</p>
+<p><strong>motion_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutMotionFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, x, y)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.passive_motion_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.passive_motion_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutPassiveMotionFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, x, y)</em></strong>.</p>
+<p><strong>passive_motion_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutPassiveMotionFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, x, y)</em></strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.mouse_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.mouse_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutMouseFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, button, state, x, y)</em></strong>.
-The <em>button</em> parameter (a string) is one amongst '<em>left</em>', '<em>middle</em>' and '<em>right</em>'.
-The <em>state</em> parameter (also a string) may be '<em>up</em>' or '<em>down</em>'.</p>
+<p><strong>mouse_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutMouseFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, button, state, x, y)</em></strong>.<br>
+The <em>button</em> parameter (a string) is one amongst '<em>left</em>', '<em>middle</em>' and '<em>right</em>'.<br>
+The <em>state</em> parameter (also a string) may be '<em>up</em>' or '<em>down</em>'.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.entry_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.entry_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutEntryFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, _state</em>)<em></strong>.
-The _state</em> parameter (a string) may be '<em>in</em>' (entered) or '<em>out</em>' (left).</p>
+<p><strong>entry_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutEntryFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, _state</em>)<em></strong>.<br>
+The _state</em> parameter (a string) may be '<em>in</em>' (entered) or '<em>out</em>' (left).</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.window_status_func" class="ulist">
 <ul>
 <li>
-<p><strong>glut.window_status_func</strong> ([<em>func</em>])<br>
-<br>
-Binding to <strong>glutWindowStatusFunc</strong>.
-The <em>func</em> callback is executed as <strong><em>func(window_id, _state</em>)<em></strong>.
+<p><strong>window_status_func</strong>([<em>func</em>])<br>
+<span class="small">Binding to <strong>glutWindowStatusFunc</strong>.<br>
+The <em>func</em> callback is executed as <strong><em>func(window_id, _state</em>)<em></strong>.<br>
 The _state</em> parameter (a string) is one amongst: '<em>hidden</em>', '<em>fully retained</em>',
-'<em>partially retained</em>' or '<em>fully covered</em>'.</p>
+'<em>partially retained</em>' or '<em>fully covered</em>'.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_state_setting_and_retrieval_functions">State Setting and Retrieval Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#StateSetting">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node69.html#SECTION000100000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node69.html#SECTION000100000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.init_state" class="ulist">
 <ul>
 <li>
-<p><strong>glut.init_state</strong> ( )<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutGet(GLUT_INIT_STATE)</strong>.</p>
+<p><em>boolean</em> = <strong>init_state</strong>( )<br>
+[small]#Binding to <strong>glutGet(GLUT_INIT_STATE)</strong>. #</p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.version" class="ulist">
 <ul>
 <li>
-<p><strong>glut.version</strong> ( )<br>
-&#8594; <em>major</em>, <em>minor</em>, <em>micro</em><br>
-<br>
-Binding to <strong>glutGet(GLUT_VERSION)</strong>.</p>
+<p><em>major</em>, <em>minor</em>, <em>micro</em> = <strong>version</strong>( )<br>
+[small]#Binding to <strong>glutGet(GLUT_VERSION)</strong>. #</p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.action_on_window_close" class="ulist">
 <ul>
 <li>
-<p><strong>glut.action_on_window_close</strong> ([<em>action</em>])<br>
-&#8594; <em>action</em><br>
-<br>
-Binding to <strong>glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE)</strong>.
-The <em>action</em> argument (a string) must be one amongst '<em>exit</em>', '<em>return</em>', and '<em>continue</em>'.</p>
+<p><em>action</em> = <strong>action_on_window_close</strong>([<em>action</em>])<br>
+<span class="small">Binding to <strong>glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE)</strong>.<br>
+The <em>action</em> argument (a string) must be one amongst '<em>exit</em>', '<em>return</em>', and '<em>continue</em>'.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.use_current_context" class="ulist">
 <ul>
 <li>
-<p><strong>glut.use_current_context</strong> ([<em>boolean</em>])<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_RENDERING_CONTEXT</strong>.</p>
+<p><em>boolean</em> = <strong>use_current_context</strong>([<em>boolean</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_RENDERING_CONTEXT</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.multisample" class="ulist">
 <ul>
 <li>
-<p><strong>glut.multisample</strong> ([<em>nsamples</em>])<br>
-&#8594; <em>nsamples</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_MULTISAMPLE</strong>.</p>
+<p><em>nsamples</em> = <strong>multisample</strong>([<em>nsamples</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_MULTISAMPLE</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.aux_buffers" class="ulist">
 <ul>
 <li>
-<p><strong>glut.aux_buffers</strong> ([<em>nbuffers</em>])<br>
-&#8594; <em>nbuffers</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_AUX</strong>.</p>
+<p><em>nbuffers</em> = <strong>aux_buffers</strong>([<em>nbuffers</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_AUX</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.screen" class="ulist">
 <ul>
 <li>
-<p><strong>glut.screen</strong> ( )<br>
-&#8594; <em>width</em>, <em>height</em>, <em>width_mm</em>, <em>height_mm</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> where <em>what</em> = <strong>GLUT_SCREEN_WIDTH</strong>,
-<strong>GLUT_SCREEN_HEIGHT</strong>, <strong>GLUT_SCREEN_WIDTH_MM</strong> and <strong>GLUT_SCREEN_HEIGHT_MM</strong>.</p>
+<p><em>width</em>, <em>height</em>, <em>width_mm</em>, <em>height_mm</em> = <strong>screen</strong>( )<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> where <em>what</em> = <strong>GLUT_SCREEN_WIDTH</strong>,
+<strong>GLUT_SCREEN_HEIGHT</strong>, <strong>GLUT_SCREEN_WIDTH_MM</strong> and <strong>GLUT_SCREEN_HEIGHT_MM</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.skip_stale_motion_events" class="ulist">
 <ul>
 <li>
-<p><strong>glut.skip_stale_motion_events</strong> ([<em>boolean</em>])<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_SKIP_STALE_MOTION_EVENTS</strong>.</p>
+<p><em>boolean</em> = <strong>skip_stale_motion_events</strong>([<em>boolean</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_SKIP_STALE_MOTION_EVENTS</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_font_draw_join_dots" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_font_draw_join_dots</strong> ([<em>boolean</em>])<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_STROKE_FONT_DRAW_JOIN_DOTS</strong>.</p>
+<p><em>boolean</em> = <strong>stroke_font_draw_join_dots</strong>([<em>boolean</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_STROKE_FONT_DRAW_JOIN_DOTS</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.geometry_visualize_normals" class="ulist">
 <ul>
 <li>
-<p><strong>glut.geometry_visualize_normals</strong> ([<em>boolean</em>])<br>
-&#8594; <em>boolean</em><br>
-<br>
-Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_GEOMETRY_VISUALIZE_NORMALS</strong>.</p>
+<p><em>boolean</em> = <strong>geometry_visualize_normals</strong>([<em>boolean</em>])<br>
+<span class="small">Binding to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong> where <em>what</em> = <strong>GLUT_GEOMETRY_VISUALIZE_NORMALS</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div class="paragraph">
-<p>Other bindings to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong>:</p>
+<p><span class="small">Other bindings to <strong>glutGet(what)</strong> and to <strong>glutSetOption(what)</strong>:<br>
+- <em>what</em> = <strong>GLUT_INIT_WINDOW_X</strong>: see <a href="#glut.init_window_position">glut.init_window_position</a><br>
+- <em>what</em> = <strong>GLUT_INIT_WINDOW_Y</strong>: see <a href="#glut.init_window_position">glut.init_window_position</a><br>
+- <em>what</em> = <strong>GLUT_INIT_WINDOW_WIDTH</strong>: see <a href="#glut.init_window_size">glut.init_window_size</a><br>
+- <em>what</em> = <strong>GLUT_INIT_WINDOW_HEIGHT</strong>: see <a href="#glut.init_window_size">glut.init_window_size</a><br>
+- <em>what</em> = <strong>GLUT_INIT_DISPLAY_MODE</strong>: see <a href="#glut.init_display_mode">glut.init_display_mode</a><br>
+- <em>what</em> = <strong>GLUT_WINDOW_CURSOR</strong>: see <a href="#glut.cursor">glut.cursor</a><br>
+- <em>what</em> = <strong>GLUT_FULL_SCREEN</strong>: see <a href="#glut.full_screen">glut.full_screen</a></span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>what</em> = <strong>GLUT_INIT_WINDOW_X</strong>: see <a href="#glut.init_window_position">glut.init_window_position</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_INIT_WINDOW_Y</strong>: see <a href="#glut.init_window_position">glut.init_window_position</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_INIT_WINDOW_WIDTH</strong>: see <a href="#glut.init_window_size">glut.init_window_size</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_INIT_WINDOW_HEIGHT</strong>: see <a href="#glut.init_window_size">glut.init_window_size</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_INIT_DISPLAY_MODE</strong>: see <a href="#glut.init_display_mode">glut.init_display_mode</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_WINDOW_CURSOR</strong>: see <a href="#glut.cursor">glut.cursor</a></p>
-</li>
-<li>
-<p><em>what</em> = <strong>GLUT_FULL_SCREEN</strong>: see <a href="#glut.full_screen">glut.full_screen</a></p>
-</li>
-</ul>
-</div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_font_rendering_functions">Font Rendering Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#FontRendering">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node75.html#SECTION000110000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node75.html#SECTION000110000000000000000">GLUT</a>.</span></p>
 </div>
 <div class="paragraph">
-<p>In the functions that follow, the <em>font</em> argument is a string amongst:</p>
+<p><span class="small">In the functions that follow, the <em>font</em> argument is a string amongst:<br>
+<strong>Bitmap fonts</strong>: '<em>bitmap&nbsp;9&nbsp;by&nbsp;15</em>', '<em>bitmap&nbsp;8&nbsp;by&nbsp;13</em>', '<em>bitmap&nbsp;times&nbsp;roman&nbsp;10</em>', '<em>bitmap&nbsp;times&nbsp;roman&nbsp;24</em>', '<em>bitmap&nbsp;helvetica&nbsp;10</em>', '<em>bitmap&nbsp;helvetica&nbsp;12</em>' and '<em>bitmap&nbsp;helvetica&nbsp;18</em>'.<br>
+<strong>Stroke fonts</strong>: '<em>stroke&nbsp;roman</em>' and '<em>stroke&nbsp;mono&nbsp;roman</em>'.</span></p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Bitmap fonts</dt>
-<dd>
-<p>'<em>bitmap 9 by 15</em>', '<em>bitmap 8 by 13</em>', '<em>bitmap times roman 10</em>', '<em>bitmap times roman 24</em>', '<em>bitmap helvetica 10</em>', '<em>bitmap helvetica 12</em>' and '<em>bitmap helvetica 18</em>'.</p>
-</dd>
-<dt class="hdlist1">Stroke fonts</dt>
-<dd>
-<p>'<em>stroke roman</em>' and '<em>stroke mono roman</em>'.</p>
-</dd>
-</dl>
-</div>
-<hr>
 <div id="glut.bitmap_character" class="ulist">
 <ul>
 <li>
-<p><strong>glut.bitmap_character</strong> (<em>font</em>, <em>char</em>)<br>
-<br>
-Binding to <strong>glutBitmapCharacter</strong>.</p>
+<p><strong>bitmap_character</strong>(<em>font</em>, <em>char</em>)<br>
+<span class="small">Binding to <strong>glutBitmapCharacter</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.bitmap_string" class="ulist">
 <ul>
 <li>
-<p><strong>glut.bitmap_string</strong> (<em>font</em>, <em>string</em>)<br>
-<br>
-Binding to <strong>glutBitmapString</strong>.</p>
+<p><strong>bitmap_string</strong>(<em>font</em>, <em>string</em>)<br>
+<span class="small">Binding to <strong>glutBitmapString</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.bitmap_width" class="ulist">
 <ul>
 <li>
-<p><strong>glut.bitmap_width</strong> (<em>font</em>, <em>char</em>)<br>
-&#8594; <em>width</em><br>
-<br>
-Binding to <strong>glutBitmapWidth</strong>.</p>
+<p><em>width</em> = <strong>bitmap_width</strong>(<em>font</em>, <em>char</em>)<br>
+<span class="small">Binding to <strong>glutBitmapWidth</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.bitmap_length" class="ulist">
 <ul>
 <li>
-<p><strong>glut.bitmap_length</strong> (<em>font</em>, <em>string</em>)<br>
-&#8594; <em>length</em><br>
-<br>
-Binding to <strong>glutBitmapLength</strong>.</p>
+<p><em>length</em> = <strong>bitmap_length</strong>(<em>font</em>, <em>string</em>)<br>
+<span class="small">Binding to <strong>glutBitmapLength</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.bitmap_height" class="ulist">
 <ul>
 <li>
-<p><strong>glut.bitmap_height</strong> (<em>font</em>)<br>
-&#8594; <em>height</em><br>
-<br>
-Binding to <strong>glutBitmapHeight</strong>.</p>
+<p><em>height</em> = <strong>bitmap_height</strong>(<em>font</em>)<br>
+<span class="small">Binding to <strong>glutBitmapHeight</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_character" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_character</strong> (<em>font</em>, <em>char</em>)<br>
-<br>
-Binding to <strong>glutStrokeCharacter</strong>.</p>
+<p><strong>stroke_character</strong>(<em>font</em>, <em>char</em>)<br>
+<span class="small">Binding to <strong>glutStrokeCharacter</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_string" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_string</strong> (<em>font</em>, <em>string</em>)<br>
-<br>
-Binding to <strong>glutStrokeString</strong>.</p>
+<p><strong>stroke_string</strong>(<em>font</em>, <em>string</em>)<br>
+<span class="small">Binding to <strong>glutStrokeString</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_width" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_width</strong> (<em>font</em>, <em>char</em>)<br>
-&#8594; <em>width</em><br>
-<br>
-Binding to <strong>glutStrokeWidth</strong>.</p>
+<p><em>width</em> = <strong>stroke_width</strong>(<em>font</em>, <em>char</em>)<br>
+<span class="small">Binding to <strong>glutStrokeWidth</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_length" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_length</strong> (<em>font</em>, <em>string</em>)<br>
-&#8594; <em>length</em><br>
-<br>
-Binding to <strong>glutStrokeLength</strong>.</p>
+<p><em>length</em> = <strong>stroke_length</strong>(<em>font</em>, <em>string</em>)<br>
+<span class="small">Binding to <strong>glutStrokeLength</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.stroke_height" class="ulist">
 <ul>
 <li>
-<p><strong>glut.stroke_height</strong> (<em>font</em>)<br>
-&#8594; <em>height</em><br>
-<br>
-Binding to <strong>glutStrokeHeight</strong>.</p>
+<p><em>height</em> = <strong>stroke_height</strong>(<em>font</em>)<br>
+<span class="small">Binding to <strong>glutStrokeHeight</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_geometric_object_rendering_functions">Geometric Object Rendering Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#GeometricObject">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node80.html#SECTION000120000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node80.html#SECTION000120000000000000000">GLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Not supported.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_game_mode_functions">Game Mode Functions</h3>
 <div class="paragraph">
-<p>References:
-<a href="http://freeglut.sourceforge.net/docs/api.php#GameMode">FreeGLUT</a>.</p>
+<p><span class="small">References:
+<a href="http://freeglut.sourceforge.net/docs/api.php#GameMode">FreeGLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.game_mode_string" class="ulist">
 <ul>
 <li>
-<p><strong>glut.game_mode_string</strong> (<em>mode</em>)<br>
-<br>
-Binding to <strong>glutGameModeString</strong>.</p>
+<p><strong>game_mode_string</strong>(<em>mode</em>)<br>
+<span class="small">Binding to <strong>glutGameModeString</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.enter_game_mode" class="ulist">
 <ul>
 <li>
-<p><strong>glut.enter_game_mode</strong> ( )<br>
-&#8594; <em>window_id</em><br>
-<br>
-Binding to <strong>glutEnterGameMode</strong>.</p>
+<p><em>window_id</em> = <strong>enter_game_mode</strong>( )<br>
+<span class="small">Binding to <strong>glutEnterGameMode</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.leave_game_mode" class="ulist">
 <ul>
 <li>
-<p><strong>glut.leave_game_mode</strong> ( )<br>
-<br>
-Binding to <strong>glutLeaveGameMode</strong>.</p>
+<p><strong>leave_game_mode</strong>( )<br>
+<span class="small">Binding to <strong>glutLeaveGameMode</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.game_mode_get" class="ulist">
 <ul>
 <li>
-<p><strong>glut.game_mode_get</strong> ([<em>name</em>])<br>
-&#8594; <em>value</em><br>
-<br>
-Binding to <strong>glutGameModeGet</strong>.
-The parameter <em>name</em> may be a string amongst: '<em>active</em>', '<em>possible</em>' and '<em>display changed</em>'
-(these return a boolean <em>value</em>) or '<em>width</em>', '<em>height</em>', '<em>pixel depth</em>', and '<em>refresh rate</em>'
-(return an integer <em>value</em>).</p>
+<p><em>value</em> = <strong>game_mode_get</strong>([<em>name</em>])<br>
+<span class="small">Binding to <strong>glutGameModeGet</strong>.<br>
+The parameter <em>name</em> may be a string amongst: '<em>active</em>', '<em>possible</em>' and '<em>display&nbsp;changed</em>'
+(these return a boolean <em>value</em>) or '<em>width</em>', '<em>height</em>', '<em>pixel&nbsp;depth</em>', and '<em>refresh&nbsp;rate</em>'
+(return an integer <em>value</em>).</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_video_resize_functions">Video Resize Functions</h3>
 <div class="paragraph">
-<p>References:
-<a href="http://freeglut.sourceforge.net/docs/api.php#VideoResize">FreeGLUT</a>.</p>
+<p><span class="small">References:
+<a href="http://freeglut.sourceforge.net/docs/api.php#VideoResize">FreeGLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Not supported.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_color_map_functions">Color Map Functions</h3>
 <div class="paragraph">
-<p>References:
+<p><span class="small">References:
 <a href="http://freeglut.sourceforge.net/docs/api.php#ColorMap">FreeGLUT</a>,
-<a href="https://www.opengl.org/resources/libraries/glut/spec3/node65.html#SECTION00090000000000000000">GLUT</a>.</p>
+<a href="https://www.opengl.org/resources/libraries/glut/spec3/node65.html#SECTION00090000000000000000">GLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.set_color" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_color</strong> (<em>cell</em> [, <em>red</em>, <em>green</em>, <em>blue</em>])<br>
-&#8594; <em>red</em>, <em>green</em>, <em>blue</em><br>
-<br>
-Binding to <strong>glutSetColor</strong>.
-With no color arguments, only returns the current values.</p>
+<p><em>red</em>, <em>green</em>, <em>blue</em> = <strong>set_color</strong>(<em>cell</em> [, <em>red</em>, <em>green</em>, <em>blue</em>])<br>
+<span class="small">Binding to <strong>glutSetColor</strong>.<br>
+With no color arguments, only returns the current values.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.get_color" class="ulist">
 <ul>
 <li>
-<p><strong>glut.get_color</strong> (<em>cell</em>)<br>
-&#8594; <em>red</em>, <em>green</em>, <em>blue</em><br>
-<br>
-Binding to <strong>glutGetColor</strong> (actually an alias of <a href="#glut.set_color">glut.set_color</a>).</p>
+<p><em>red</em>, <em>green</em>, <em>blue</em> = <strong>get_color</strong>(<em>cell</em>)<br>
+<span class="small">Binding to <strong>glutGetColor</strong>(actually an alias of <a href="#glut.set_color">glut.set_color</a>).</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.copy_colormap" class="ulist">
 <ul>
 <li>
-<p><strong>glut.copy_colormap</strong> ([<em>window_id</em>])<br>
-<br>
-Binding to <strong>glutCopyColormap</strong>.</p>
+<p><strong>copy_colormap</strong>([<em>window_id</em>])<br>
+<span class="small">Binding to <strong>glutCopyColormap</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_multitouch_functions">MultiTouch Functions</h3>
 <div class="paragraph">
-<p>References:
-<a href="http://freeglut.sourceforge.net/docs/api.php#MultiTouch">FreeGLUT</a>.</p>
+<p><span class="small">References:
+<a href="http://freeglut.sourceforge.net/docs/api.php#MultiTouch">FreeGLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Not supported.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_mobile_functions">Mobile functions</h3>
 <div class="paragraph">
-<p>References:
-<a href="http://freeglut.sourceforge.net/docs/api.php#Mobile">FreeGLUT</a>.</p>
+<p><span class="small">References:
+<a href="http://freeglut.sourceforge.net/docs/api.php#Mobile">FreeGLUT</a>.</span></p>
 </div>
 <div class="paragraph">
 <p>Not supported.</p>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_miscellaneous_functions">Miscellaneous Functions</h3>
 <div class="paragraph">
-<p>References:
-<a href="http://freeglut.sourceforge.net/docs/api.php#Miscellaneous">FreeGLUT</a>.</p>
+<p><span class="small">References:
+<a href="http://freeglut.sourceforge.net/docs/api.php#Miscellaneous">FreeGLUT</a>.</span></p>
 </div>
-<hr>
 <div id="glut.set_key_repeat" class="ulist">
 <ul>
 <li>
-<p><strong>glut.set_key_repeat</strong> ([<em>option</em>])<br>
-<br>
-Binding to <strong>glutSetKeyRepeat</strong>.
-The <em>option</em> argument (a string) must be one amongst '<em>on</em>', '<em>off</em>', and '<em>default</em>'.</p>
+<p><strong>set_key_repeat</strong>([<em>option</em>])<br>
+<span class="small">Binding to <strong>glutSetKeyRepeat</strong>.<br>
+The <em>option</em> argument (a string) must be one amongst '<em>on</em>', '<em>off</em>', and '<em>default</em>'.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.ignore_key_repeat" class="ulist">
 <ul>
 <li>
-<p><strong>glut.ignore_key_repeat</strong> (<em>boolean</em>)<br>
-<br>
-Binding to <strong>glutIgnoreKeyRepeat</strong>.</p>
+<p><strong>ignore_key_repeat</strong>(<em>boolean</em>)<br>
+<span class="small">Binding to <strong>glutIgnoreKeyRepeat</strong>.</span></p>
 </li>
 </ul>
 </div>
-<hr>
 <div id="glut.report_errors" class="ulist">
 <ul>
 <li>
-<p><strong>glut.report_errors</strong> ( )<br>
-<br>
-Binding to <strong>glutReportErrors</strong>.</p>
+<p><strong>report_errors</strong>( )<br>
+<span class="small">Binding to <strong>glutReportErrors</strong>.</span></p>
 </li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
@@ -2083,7 +1826,7 @@ Binding to <strong>glutReportErrors</strong>.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.5<br>
-Last updated 2016-06-01 15:13:58 CEST
+Last updated 2016-06-14 17:01:09 CEST
 </div>
 </div>
 </body>

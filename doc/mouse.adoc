@@ -1,29 +1,25 @@
 
 === Mouse Cursor Functions
 
-References: 
+[small]#References: 
 http://freeglut.sourceforge.net/docs/api.php#MouseCursor[FreeGLUT],
-https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].
+https://www.opengl.org/resources/libraries/glut/spec3/node15.html#SECTION00050000000000000000[GLUT].#
 
-'''
+
 [[glut.cursor]]
-* *glut.cursor* ([_cursor_]) +
--> _cursor_ +
- +
-Binding to *glutSetCursor*. 
+* _cursor_ = *cursor*([_cursor_]) +
+[small]#Binding to *glutSetCursor*. +
 The optional _cursor_ argument (a string) must be one of the following:
 '_right arrow_', '_left arrow_', '_info_', '_destroy_', '_help_', '_cycle_',
 '_spray_', '_wait_', '_text_', '_crosshair_', '_up down_', '_left right_', 
 '_top side_', '_bottom side_', '_left side_', '_right side_', '_top left corner_',
 '_top right corner_', '_bottom right corner_', '_bottom left corner_', '_inherit_',
-'_none_', or '_full crosshair_'.
-With no arguments, only returns the current cursor.
+'_none_', or '_full crosshair_'. +
+With no arguments, only returns the current cursor.#
 
-'''
+
 [[glut.warp_pointer]]
-* *glut.warp_pointer* (_x_, _y_) +
- +
-Binding to *glutWarpPointer*.
+* *warp_pointer*(_x_, _y_) +
+[small]#Binding to *glutWarpPointer*.#
 
-<<<
 

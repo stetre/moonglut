@@ -1,38 +1,30 @@
 
 === Game Mode Functions
 
-References: 
-http://freeglut.sourceforge.net/docs/api.php#GameMode[FreeGLUT].
+[small]#References: 
+http://freeglut.sourceforge.net/docs/api.php#GameMode[FreeGLUT].#
 
-'''
+
 [[glut.game_mode_string]]
-* *glut.game_mode_string* (_mode_) +
- +
-Binding to *glutGameModeString*.
+* *game_mode_string*(_mode_) +
+[small]#Binding to *glutGameModeString*.#
 
-'''
+
 [[glut.enter_game_mode]]
-* *glut.enter_game_mode* ( ) +
--> _window_id_ +
- +
-Binding to *glutEnterGameMode*.
+* _window_id_ = *enter_game_mode*( ) +
+[small]#Binding to *glutEnterGameMode*.#
 
-'''
+
 [[glut.leave_game_mode]]
-* *glut.leave_game_mode* ( ) +
- +
-Binding to *glutLeaveGameMode*.
+* *leave_game_mode*( ) +
+[small]#Binding to *glutLeaveGameMode*.#
 
-'''
+
 [[glut.game_mode_get]]
-* *glut.game_mode_get* ([_name_]) +
--> _value_ +
- +
-Binding to *glutGameModeGet*.
-The parameter _name_ may be a string amongst: '_active_', '_possible_' and '_display changed_'
-(these return a boolean _value_) or '_width_', '_height_', '_pixel depth_', and '_refresh rate_'
-(return an integer _value_). 
+* _value_ = *game_mode_get*([_name_]) +
+[small]#Binding to *glutGameModeGet*. +
+The parameter _name_ may be a string amongst: '_active_', '_possible_' and '_display&nbsp;changed_'
+(these return a boolean _value_) or '_width_', '_height_', '_pixel&nbsp;depth_', and '_refresh&nbsp;rate_'
+(return an integer _value_).# 
 
-
-<<<
 

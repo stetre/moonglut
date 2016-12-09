@@ -1,32 +1,27 @@
 
 === Miscellaneous Functions
 
-References: 
-http://freeglut.sourceforge.net/docs/api.php#Miscellaneous[FreeGLUT].
+[small]#References: 
+http://freeglut.sourceforge.net/docs/api.php#Miscellaneous[FreeGLUT].#
 
-'''
+
 [[glut.set_key_repeat]]
-* *glut.set_key_repeat* ([_option_]) +
- +
-Binding to *glutSetKeyRepeat*.
-The _option_ argument (a string) must be one amongst '_on_', '_off_', and '_default_'.
+* *set_key_repeat*([_option_]) +
+[small]#Binding to *glutSetKeyRepeat*. +
+The _option_ argument (a string) must be one amongst '_on_', '_off_', and '_default_'.#
 
-'''
+
 [[glut.ignore_key_repeat]]
-* *glut.ignore_key_repeat* (_boolean_) +
- +
-Binding to *glutIgnoreKeyRepeat*.
+* *ignore_key_repeat*(_boolean_) +
+[small]#Binding to *glutIgnoreKeyRepeat*.#
 
-'''
+
 [[glut.report_errors]]
-* *glut.report_errors* ( ) +
- +
-Binding to *glutReportErrors*.
+* *report_errors*( ) +
+[small]#Binding to *glutReportErrors*.#
 
 
 ////
 glutForceJoystickFunc NA
 ////
-
-<<<
 

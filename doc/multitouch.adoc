@@ -1,8 +1,8 @@
 
 === MultiTouch Functions
 
-References: 
-http://freeglut.sourceforge.net/docs/api.php#MultiTouch[FreeGLUT].
+[small]#References: 
+http://freeglut.sourceforge.net/docs/api.php#MultiTouch[FreeGLUT].#
 
 Not supported.
 
@@ -15,5 +15,4 @@ glutMultiPassiveFunc NA
 
 ////
 
-<<<
 

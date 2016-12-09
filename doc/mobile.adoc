@@ -1,8 +1,8 @@
 
 === Mobile functions
 
-References: 
-http://freeglut.sourceforge.net/docs/api.php#Mobile[FreeGLUT].
+[small]#References: 
+http://freeglut.sourceforge.net/docs/api.php#Mobile[FreeGLUT].#
 
 Not supported.
 
@@ -12,5 +12,4 @@ glutInitContextFunc NA
 glutAppStatusFunc 	NA
 ////
 
-<<<
 
