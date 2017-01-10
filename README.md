@@ -62,23 +62,5 @@ Other examples can be found in the **examples/** directory contained in the rele
 
 #### See also
 
-* Windowing and GUI:
-[MoonFLTK](https://github.com/stetre/moonfltk),
-[MoonGLFW](https://github.com/stetre/moonglfw).
-
-* Rendering:
-[MoonGL](https://github.com/stetre/moongl).
-
-* Math:
-[MoonGLMATH](https://github.com/stetre/moonglmath).
-
-* Image and model loading:
-[MoonAssimp](https://github.com/stetre/moonassimp),
-[MoonSOIL](https://github.com/stetre/moonsoil).
-
-* Font rendering:
-[MoonFreeType](https://github.com/stetre/moonfreetype).
-
-* Audio:
-[LuaJACK](https://github.com/stetre/luajack).
+* [MoonLibs - Graphics and Audio Lua Libraries](https://github.com/stetre/moonlibs).
 
