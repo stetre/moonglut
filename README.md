@@ -1,4 +1,4 @@
-##MoonGLUT: Lua bindings for FreeGLUT
+## MoonGLUT: Lua bindings for FreeGLUT
 
 MoonGLUT is a Lua binding library for [FreeGLUT](http://freeglut.sourceforge.net/).
 
