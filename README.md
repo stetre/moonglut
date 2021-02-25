@@ -1,5 +1,9 @@
 ## MoonGLUT: Lua bindings for FreeGLUT
 
+_*** This project is discontinued, superseded by
+[MoonGLFW](https://github.com/stetre/moonglfw). ***_
+
+---
 MoonGLUT is a Lua binding library for [FreeGLUT](http://freeglut.sourceforge.net/).
 
 It runs on GNU/Linux and on Windows (MSYS2/MinGW) and requires 
